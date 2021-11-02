@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #212121;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+}
+#container_wrapper, #container_about, #container_hardSkill, #container_footer, #container_contact{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#container_about, #container_hardSkill, #container_footer{
+    background-color: #1d1d1d;
+}
+/* ========================== HEADER =======================*/
+#header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 20px #000;
+    position: fixed;
+}
+.header_container{
+    width: 75rem;
+    height: 5.5rem;
+    display: flex;
+    justify-content: space-around;
+}
+.header_brandName{
+    flex: 1;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header_navbar{
+    flex: 5;
+}
+.navbar_list{
+    height: 5.5rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    list-style: none;
+}
+.navbar_list > a{
+    text-decoration: none;
+    color: #fff;
+    margin-right: 3.5rem;
+
+}
+.list_social > a{
+    color: #fff;
+    margin-left: 1rem;
+}
+.navbar_list > a:hover, .list_social > a:hover{
+    color: indianred;
+    transform: scale(1.3);
+}
+/* ==========================  CONTAINER  =======================*/
+#container_wrapper{
+    margin-top: 5.5rem;
+}
+.wrapper{
+    width: 75rem;
+    height: 85vh;
+    display: flex;
+}
+.wrapper_text{
+    align-self: center;
+    flex: 1;
+    color: #fff;
+}
+.wrapper_paragraph{
+    font-size: 1.5rem;
+}
+.wrapper_title{
+    font-size: 2.8rem;
+}
+.wrapper_subtitle{
+    font-weight: 400;
+    font-size: 2.1rem;
+}
+.wrapper_img{
+    flex: 1;
+}
+/* ======================= ABOUT =====================*/
+.about_content{
+    width: 75rem;
+    height: 31.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+}
+.about{
+    width: 65rem;
+    height: 25rem;
+    display: flex;
+    border: 1px solid red;
+}
+.about_img, .about_info{
+    flex: 1;
+    border: 1px solid red;
+}
+/* ======================= PORTFOLIO =====================*/
+#portfolio_container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.portfolio{
+    width: 75rem;
+    height: 25rem;
+    border: 1px solid red;
+}
+/* ======================= HARD SKILL =====================*/
+.hardSkill{
+    width: 75rem;
+    height: 25rem;
+    border: 1px solid red;
+}
+/* ======================== CONTACT ======================*/
+.contact{
+    width: 75rem;
+    height: 25rem;
+    border: 1px solid red;
+}
+
+/* ========================= FOOTER =======================*/
+.footer{
+    width: 75rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+}
+.footer_brandName{
+    display: flex;
+}
+.footer_brandName::after{
+    content: '';
+    display: flex;
+    align-self: center;
+    width: 65rem;
+    height: 1px;
+    margin-left: 1.25rem;
+    background-color: #fff;
+}
+.footer_menus{
+    width: 25rem;
+    display: flex;
+    margin-left: 20rem;
+}
+.menu_items{
+    flex: 1;
+}
+.menu_items ul{
+    list-style: none;
+}
+.menu_items ul a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 300;
+}
+.menu_items ul a li{
+    margin-top: 1.25rem;
+}
+.menu{
+    color: #fff;
+    font-size: 1.25rem;
+}
+.copy{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    line-height: 3rem;
+    border: 1px solid red;
+}
