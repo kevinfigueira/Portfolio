@@ -284,6 +284,6 @@ body{
     display: flex;
     justify-content: center;
     line-height: 3rem;
-    color: darkgrey;
+    color: darkgrey ;
     border: 1px solid red;
 }
