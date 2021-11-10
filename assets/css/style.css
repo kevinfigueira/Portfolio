@@ -41,14 +41,12 @@ body{
     width: var(--container);
     height: 5.5rem;
     display: flex;
-    justify-content: space-around;
-    border: 1px solid red;
 }
 .header_brandName{
     flex: 1;
     height: inherit;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 .header_navbar{
@@ -64,8 +62,9 @@ body{
 .navbar_list > a{
     text-decoration: none;
     color: #fff;
+}
+.navbar_list > a:not(:last-child){
     margin-right: 3.5rem;
-
 }
 .navbar_list > a:hover{
     color: #4997FF;
@@ -131,7 +130,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
 }
 .about{
     width: 65rem;
@@ -170,21 +168,49 @@ body{
 .info_about:not(:last-child){
     margin-bottom: 1rem;
 }
+.about_btn{
+    position: relative;
+    top: 1.25rem;
+    border: none;
+    padding: .4rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.about_btn:hover{
+    transform: scale(.9);
+}
+.about_btn a{
+    text-decoration: none;
+    color: var(--colorOne);
+}
 /* ======================= HARD SKILL =====================*/
 .hardSkill{
     width: 75rem;
     height: 25rem;
     display: flex;
-    justify-content: center;
-    border: 1px solid red;
+    flex-direction: column;
+    align-items: center;
 }
 .skill_title{
+    flex: 1;
     padding: 2.5rem 0;
 }
 .skill_title::after{
     width: 4.438rem;
     top: 5rem;
     left: 0.875rem;
+}
+.skill_content{
+    flex: 3;
+}
+.skill_content img{
+    width: 5rem;
+}
+.skill_content img:hover{
+    opacity: .5;
+}
+.skill_content img:not(:last-child){
+    margin-right: 1.25rem;
 }
 /* ======================= PORTFOLIO =====================*/
 #portfolio_container{
