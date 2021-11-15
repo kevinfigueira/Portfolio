@@ -8,9 +8,6 @@
 html{
     scroll-behavior: smooth;
 }
-body{
-    background-color: #01001B;
-}
 :root{
     --container: 75rem;
     --colorOne: #4997FF;
@@ -26,9 +23,7 @@ body{
     display: flex;
     justify-content: center;
 }
-#container_about, #portfolio_container, #container_footer{
-    background-color: #050515;
-}
+
 /* ========================== HEADER =======================*/
 #header{
     width: 100%;
@@ -36,6 +31,8 @@ body{
     justify-content: center;
     box-shadow: 0 0 20px #000;
     position: fixed;
+    z-index: 10;
+    background-color: #1A1B30;
 }
 .header_container{
     width: var(--container);
@@ -46,8 +43,21 @@ body{
     flex: 1;
     height: inherit;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+}
+.header_brandName a {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+}
+.header_brandName > a > span{
+    flex: 1;
+    background-image: url(../img/Logo-oficial.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .header_navbar{
     flex: 5;
@@ -62,14 +72,17 @@ body{
 .navbar_list > a{
     text-decoration: none;
     color: #fff;
-}
-.navbar_list > a:not(:last-child){
     margin-right: 3.5rem;
 }
 .navbar_list > a:hover{
     color: #4997FF;
 }
+.navbar_list .active{
+    border-bottom: 2px solid var(--colorOne);
+}
 /* ==========================  CONTENT GENERAL  =======================*/
+
+/* ========================== WRAPPER =======================*/
 #container_wrapper{
     height: var(--height);
     margin-top: 5.5rem;
@@ -107,6 +120,10 @@ body{
     color: #4997FF;
     font-size: 2.5rem;
 }
+.wrapper_subtitle::after{
+    content: "_";
+    animation: blink .7s infinite;
+}
 /* ======= Social ======*/
 .wrapper_social{
     flex: 1;
@@ -122,6 +139,10 @@ body{
 /* ======= Image ======*/
 .wrapper_img{
     flex: 1;
+    background-image: url(../img/banner-image-official.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 /* ======================= ABOUT =====================*/
 .about_content{
@@ -145,7 +166,6 @@ body{
     font-size: 2rem;
     padding-bottom: 1.25rem;
     position: relative;
-    color: #fff;
 }
 .info_title::after, .portfolio_tilte::after, .skill_title::after{
     content: '';
@@ -163,7 +183,6 @@ body{
     word-wrap: break-word;
     line-height: 2rem;
     text-indent: 1.25rem;
-    color: #fff;
 }
 .info_about:not(:last-child){
     margin-bottom: 1rem;
@@ -171,7 +190,7 @@ body{
 .about_btn{
     position: relative;
     top: 1.25rem;
-    border: none;
+    border: 1px solid rgba(0,0,0,.5);
     padding: .4rem;
     border-radius: 5px;
     cursor: pointer;
@@ -206,11 +225,16 @@ body{
 .skill_content img{
     width: 5rem;
 }
-.skill_content img:hover{
+.skill_content img:hover, .skill_content i:hover{
     opacity: .5;
 }
 .skill_content img:not(:last-child){
     margin-right: 1.25rem;
+}
+.skill_content i{
+    position: relative;
+    top: -10px;
+    color: #1E7442;
 }
 /* ======================= PORTFOLIO =====================*/
 #portfolio_container{
@@ -220,11 +244,10 @@ body{
 }
 .portfolio{
     width: var(--container);
-    height: var(--height);
+    height: 95rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid red;
 }
 .portfolio_tilte{
     padding: 2.5rem 0;
@@ -234,23 +257,90 @@ body{
     left: 0.938rem;
     top: 5rem;
 }
+.portfolio_buttons{
+    padding: 1.25rem;
+}
+.portfolio_buttons button{
+    position: relative;
+    bottom: 1.25rem;
+    border:none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    background-color: #fff;
+}
+.portfolio_buttons button:not(:last-child){
+    margin-right: 1.5rem;
+}
+.portfolio_buttons .active_btn{
+    border-bottom: 2px solid var(--colorOne);
+}
 .portfolio_project{
-    width: 70rem;
-    height: 30rem;
+    width: 58rem;
     display: flex;
     flex-direction: column;
-    
 }
-.container_project{
-    flex: 1;
+.portfolio_area{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 78rem;
 }
-.project{
-    flex: 1;
+.card_container{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    transition: all .3s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: all .3s;
+}
+.card_container:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.card_container .image img{
+    width: 100%;
     height: 100%;
-    border: 1px solid red;
+    transition: all .5s;
+}
+.card_container .image img:hover{
+    transform: scale(1.1);
+}
+.card_content{
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    transition: all .3s;
+    transform: translateY(70%);
+}
+.card_content .card_title, .card_paragraph{
+    text-align: center;
+    padding: .5rem;
+    color: #212121;
+    transition: all .3s;
+}
+.card_content .card_link{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.card_content .card_link a{
+    padding: 1rem .6rem;
+    color: #212121;
+}
+.card_content .card_link{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.card_content .card_link a{
+    padding: 1rem .6rem;
+    color: #212121;
 }
 /* ======================== CONTACT ======================*/
 .contact{
@@ -260,12 +350,16 @@ body{
 }
 
 /* ========================= FOOTER =======================*/
+#container_footer{
+    background-color: #000018;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .footer{
     width: var(--container);
     display: flex;
-    flex-direction: column;
- 
-    border: 1px solid red;
+    flex-direction: column; 
 }
 .footer_brandName{
     display: flex;
@@ -277,7 +371,7 @@ body{
     width: 65rem;
     height: 1px;
     margin-left: 1.25rem;
-    background-color: #000;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 .footer_menus{
     width: 25rem;
@@ -297,19 +391,32 @@ body{
     font-weight: 300;
 }
 .menu_items ul a li{
-    margin-top: 1.25rem;
-    color: #fff;
+    margin: 1.25rem 0;
+    color: #666666;
 }
 .menu{
     font-size: 1.25rem;
     color: #fff;
 }
 .copy{
-    width: 100%;
-    height: 3rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 6rem;
     line-height: 3rem;
-    color: darkgrey ;
-    border: 1px solid red;
+    color: #666666;
+    background-color: rgba(13, 17, 31, 0.7);
+}
+.copy_content{
+    width: var(--container);
+}
+/* ======================= MEDIA ==================*/
+@keyframes blink {
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
 }

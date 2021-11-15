@@ -2,6 +2,8 @@
 const w_paragraph = document.querySelector('.wrapper_paragraph');
 const w_title = document.querySelector('.wrapper_title');
 const w_subtitle = document.querySelector('.wrapper_subtitle');
+const card = document.querySelectorAll('.card_container');
+const cardContent = document.querySelectorAll('.card_content');
 
 
 // ================= Functions =================
@@ -22,7 +24,6 @@ function typeWrite(p, t, s){
         setTimeout(() => {
             p.innerHTML += letter;
         }, 75 * index)
-        w_paragraph.setAttribute('data-content', '|')
     });
 
     setTimeout(() => {
@@ -40,8 +41,87 @@ function typeWrite(p, t, s){
             }, 75 * index);
         });
     }, 1800)
-    
 
 }
 
 typeWrite(w_paragraph, w_title, w_subtitle);
+
+// === Cards Effects ===
+
+card.forEach((element, i) => {
+
+    element.addEventListener('mouseover', () => {
+        switch(i){
+            case 0:
+                cardContent[0].style.transform = "none";
+                break;
+            case 1:
+                cardContent[1].style.transform = "none";
+                break;
+            case 2:
+                cardContent[2].style.transform = "none";
+                break;
+            case 3:
+                cardContent[3].style.transform = "none";
+                break;
+            case 4:
+                cardContent[4].style.transform = "none";
+                break;
+            case 5:
+                cardContent[5].style.transform = "none";
+                break;
+            case 6:
+                cardContent[6].style.transform = "none";
+                break;
+            case 7:
+                cardContent[7].style.transform = "none";
+                break;
+            case 8:
+                cardContent[8].style.transform = "none";
+                break;
+            case 9:
+                cardContent[9].style.transform = "none";
+                break;
+            default:
+               break;
+        }
+    })
+
+    element.addEventListener('mouseout', () => {
+        switch(i){
+            case 0:
+                cardContent[0].style.transform = "translateY(70%)";
+                break;
+            case 1:
+                cardContent[1].style.transform = "translateY(70%)";
+                break;
+            case 2:
+                cardContent[2].style.transform = "translateY(70%)";
+                break;
+            case 3:
+                cardContent[3].style.transform = "translateY(70%)";
+                break;
+            case 4:
+                cardContent[4].style.transform = "translateY(70%)";
+                break;
+            case 5:
+                cardContent[5].style.transform = "translateY(70%)";
+                break;
+            case 6:
+                cardContent[6].style.transform = "translateY(70%)";
+                break;
+            case 7:
+                cardContent[7].style.transform = "translateY(70%)";
+                break;
+            case 8:
+                cardContent[8].style.transform = "translateY(70%)";
+                break;
+            case 9:
+                cardContent[9].style.transform = "translateY(70%)";
+                break;
+            default:
+               break;
+        }
+    })
+
+})
