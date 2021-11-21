@@ -416,7 +416,7 @@ html, body{
 .copy_content{
     width: var(--container);
 }
-/* ======================= MEDIA ==================*/
+/* ======================= @KEYFRAMES ==================*/
 @keyframes blink {
     0%, 100%{
         opacity: 1;
