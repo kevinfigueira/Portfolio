@@ -5,8 +5,9 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-html{
+html, body{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 :root{
     --container: 75rem;
@@ -30,14 +31,13 @@ html{
     display: flex;
     justify-content: center;
     box-shadow: 0 0 20px #000;
-    position: fixed;
     z-index: 10;
-    background-color: #1A1B30;
 }
 .header_container{
     width: var(--container);
     height: 5.5rem;
     display: flex;
+    border: 1px solid red;
 }
 .header_brandName{
     flex: 1;
@@ -45,19 +45,13 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid red;
 }
 .header_brandName a {
     width: 100%;
     height: inherit;
     display: flex;
     justify-content: center;
-}
-.header_brandName > a > span{
-    flex: 1;
-    background-image: url(../img/Logo-oficial.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 .header_navbar{
     flex: 5;
@@ -71,7 +65,7 @@ html{
 }
 .navbar_list > a{
     text-decoration: none;
-    color: #fff;
+    color: #212121;
     margin-right: 3.5rem;
 }
 .navbar_list > a:hover{
@@ -84,13 +78,7 @@ html{
 
 /* ========================== WRAPPER =======================*/
 #container_wrapper{
-    height: var(--height);
-    margin-top: 5.5rem;
-    background-image: url(../img/bg.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    height: 90vh;
 }
 .wrapper{
     width: var(--container);
@@ -100,7 +88,6 @@ html{
     display: flex;
     flex-direction: column;
     flex: 1;
-    color: #fff;
 }
 /* ======= Text ======*/
 .wrapper_text{
@@ -130,7 +117,7 @@ html{
     margin-top: 1.25rem;
 }
 .wrapper_social > a{
-    color: #fff;
+    color: #212121;
     margin-left: 1rem;
 }
 .wrapper_social > a > i:hover{
@@ -139,23 +126,21 @@ html{
 /* ======= Image ======*/
 .wrapper_img{
     flex: 1;
-    background-image: url(../img/banner-image-official.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-/* ======================= ABOUT =====================*/
-.about_content{
-    width: var(--container);
-    height: var(--height);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.about{
-    width: 65rem;
-    height: 25rem;
+.wrapper_img img{
+    width: 140%;
+  
+}
+/* ======================= ABOUT =====================*/
+.about_content{
+    width: var(--container);
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem 0;
 }
 .about_img, .about_info{
     flex: 1;
@@ -166,6 +151,7 @@ html{
     font-size: 2rem;
     padding-bottom: 1.25rem;
     position: relative;
+    color: #212121;
 }
 .info_title::after, .portfolio_tilte::after, .skill_title::after{
     content: '';
@@ -177,6 +163,7 @@ html{
     left: 1.875rem;
 }
 .info_about{
+    flex: 1;
     font-size: 1.2rem;
     text-align: justify;
     font-weight: 500;
@@ -190,9 +177,10 @@ html{
 .about_btn{
     position: relative;
     top: 1.25rem;
-    border: 1px solid rgba(0,0,0,.5);
     padding: .4rem;
     border-radius: 5px;
+    background-color: var(--colorOne);
+    border: 1px solid #32558354;
     cursor: pointer;
 }
 .about_btn:hover{
@@ -200,51 +188,80 @@ html{
 }
 .about_btn a{
     text-decoration: none;
-    color: var(--colorOne);
+    color: #fff;
 }
 /* ======================= HARD SKILL =====================*/
+#container_hardSkill{
+    padding: 3rem 0;
+}
 .hardSkill{
     width: 75rem;
-    height: 25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 .skill_title{
     flex: 1;
     padding: 2.5rem 0;
+    color: #212121;
 }
 .skill_title::after{
     width: 4.438rem;
     top: 5rem;
     left: 0.875rem;
 }
-.skill_content{
+.hardSkill .skill_content{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     flex: 3;
+    padding: 1.25rem;
 }
-.skill_content img{
-    width: 5rem;
+.hardSkill .skill_content .skill_card{
+    width: 220px;
+    height: 240px;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    border: 1px solid rgb(32 35 0 / 30%);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s ease;
 }
-.skill_content img:hover, .skill_content i:hover{
-    opacity: .5;
+.hardSkill .skill_content .skill_card:hover{
+    border: 1px solid red;
+    transition: .5s ease;
 }
-.skill_content img:not(:last-child){
-    margin-right: 1.25rem;
+.skill_content .skill_card img{
+    width: 3rem;
 }
 .skill_content i{
-    position: relative;
-    top: -10px;
     color: #1E7442;
+}
+.hardSkill .skill_content .skill_card figcaption{
+    position: relative;
+    top: 5px;
+    font-weight: 500;
+}
+.hardSkill .skill_content .skill_card p{
+    position: relative;
+    top: 1rem;
+    font-size: .9rem;
+    text-align: center;
+    line-height: 1.4rem;
 }
 /* ======================= PORTFOLIO =====================*/
 #portfolio_container{
     width: 100%;
     display: flex;
     justify-content: center;
+    margin: 5rem 0;
 }
 .portfolio{
     width: var(--container);
-    height: 95rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -257,11 +274,18 @@ html{
     left: 0.938rem;
     top: 5rem;
 }
+.portfolio_project{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
 .portfolio_buttons{
+    display: flex;
     padding: 1.25rem;
 }
 .portfolio_buttons button{
     position: relative;
+    top: .1rem;
     bottom: 1.25rem;
     border:none;
     cursor: pointer;
@@ -271,31 +295,38 @@ html{
 .portfolio_buttons button:not(:last-child){
     margin-right: 1.5rem;
 }
+.portfolio_buttons button:nth-child(1){
+    margin-left: 8rem;
+}
 .portfolio_buttons .active_btn{
     border-bottom: 2px solid var(--colorOne);
 }
-.portfolio_project{
-    width: 58rem;
-    display: flex;
-    flex-direction: column;
-}
 .portfolio_area{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    justify-content: space-between;
-    height: 78rem;
+}
+.area_content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 .card_container{
     position: relative;
-    width: 300px;
-    height: 400px;
+    width: 280px;
+    height: 350px;
     overflow: hidden;
     transition: all .3s;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 0 rgb(32 33 37 / 5%);
+    border: 1px solid rgb(32 33 37 / 30%);
+    border-radius: 8px;
+    margin: 1rem;
     transition: all .3s;
 }
 .card_container:hover{
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: all .5s;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
 }
 .card_container .image img{
     width: 100%;
@@ -304,6 +335,21 @@ html{
 }
 .card_container .image img:hover{
     transform: scale(1.1);
+}
+.area_content:nth-child(1) .card_container:nth-child(2){
+    height: 370px;
+}
+.area_content:nth-child(1) .card_container:nth-child(3){
+    height: 280px;
+}
+.area_content:nth-child(2) .card_container:nth-child(1){
+    height: 300px;
+}
+.area_content:nth-child(3) .card_container:nth-child(1){
+    height: 400px;
+}
+.area_content:nth-child(3) .card_container:nth-child(3){
+    height: 250px;
 }
 .card_content{
     position: absolute;
@@ -342,62 +388,22 @@ html{
     padding: 1rem .6rem;
     color: #212121;
 }
-/* ======================== CONTACT ======================*/
-.contact{
-    width: 75rem;
-    height: 25rem;
-    border: 1px solid red;
-}
+
 
 /* ========================= FOOTER =======================*/
 #container_footer{
-    background-color: #000018;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .footer{
+    flex: 1;
     width: var(--container);
     display: flex;
     flex-direction: column; 
+    border: 1px solid red;
 }
-.footer_brandName{
-    display: flex;
-}
-.footer_brandName::after{
-    content: '';
-    display: flex;
-    align-self: center;
-    width: 65rem;
-    height: 1px;
-    margin-left: 1.25rem;
-    background-color: rgba(255, 255, 255, 0.3);
-}
-.footer_menus{
-    width: 25rem;
-    display: flex;
-    margin-left: 20rem;
-}
-.menu_items{
-    flex: 1;
-}
-.menu_items ul{
-    list-style: none;
-}
-.menu_items ul a{
-    text-decoration: none;
-    color: #000;
-    font-size: 1rem;
-    font-weight: 300;
-}
-.menu_items ul a li{
-    margin: 1.25rem 0;
-    color: #666666;
-}
-.menu{
-    font-size: 1.25rem;
-    color: #fff;
-}
+
 .copy{
     display: flex;
     justify-content: center;
@@ -406,7 +412,6 @@ html{
     height: 6rem;
     line-height: 3rem;
     color: #666666;
-    background-color: rgba(13, 17, 31, 0.7);
 }
 .copy_content{
     width: var(--container);

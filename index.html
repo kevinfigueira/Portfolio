@@ -10,7 +10,7 @@
     <meta name="description" content="Desenvolvero Front-End">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="assets/img/Logo-oficial.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/1.png" type="image/x-icon">
     <title>Portfolio</title>
 </head>
 <body>
@@ -20,7 +20,7 @@
         <div class="header_container">
 
             <div class="header_brandName">
-                <a href="index.html"><span></span></a>
+                <a href="index.html"><img src="assets/img/1.png" alt="BrandName"></a>
             </div>
 
             <nav class="header_navbar"><!--NAVBAR START-->
@@ -61,48 +61,92 @@
                     </div>
 
     
-                    <div class="wrapper_img"></div>
+                    <div class="wrapper_img">
+                        <img src="assets/img/banner.png" alt="Banner">
+                    </div>
                 </div>
             </section><!--WRAPPER END-->
 
             <section id="container_about"><!--ABOUT START-->
                 <article class="about_content">
-                    <div class="about">
-                        <div class="about_img">
-                            image
-                        </div>
-                        <div class="about_info">
-                            <h2 class="info_title">Quem sou</h2>
-                            <p class="info_about"> Meu nome é Kevin Figueira. Sou desenvolvedor Front-end. 
-                            Atualmente estou cursando superior de tecnologia em Análise e Desenvolvimento de Sistemas. Estou sempre em busca de novos conhecimentos para aperfeiçoar minhas habilidades.</p>
-                            
-                            <p class="info_about">
-                                Apaixonado por tecnologia desde de criança. Gosto de transformar minhas ideias em trabalhos digitais. 
-                                Logo inciarei minha jornada em Back-End e me tornar um profissional Full-Stack.
-                            </p>
-
-                            <button class="about_btn"><a href="assets/img/Logo-oficial.png" download>Baixar CV</a></button>
-                        </div>
+                    
+                    <div class="about_img">
+                        <img src="assets/img/about.png" alt="" width="90%">
                     </div>
+                    
+                    <div class="about_info">
+                        <h2 class="info_title">Quem sou</h2>
+                        <p class="info_about"> Meu nome é Kevin Figueira. Sou desenvolvedor Front-end. 
+                        Atualmente estou cursando superior de tecnologia em Análise e Desenvolvimento de Sistemas. Estou sempre em busca de novos conhecimentos para aperfeiçoar minhas habilidades.</p>
+                        
+                        <p class="info_about">
+                            Apaixonado por tecnologia desde de criança. Gosto de transformar minhas ideias em trabalhos digitais. 
+                            Logo inciarei minha jornada em Back-End e me tornar um profissional Full-Stack.
+                        </p>
+
+                        <button class="about_btn"><a href="assets/img/Logo-oficial.png" download>Download CV <i class="fa fa-download"></i></a></button>
+                    </div>
+                    
                 </article>
-
             </section><!--ABOUT END-->
-
+            
             <section id="container_hardSkill"><!--HARDSKILL START-->
                 <div class="hardSkill">
+
                    <h2 class="skill_title">Skills</h2>
 
                    <div class="skill_content">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" />
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" />
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" />
-                        <i class="fas fa-file-excel fa-4x"></i>
+                       <figure class="skill_card">
+                           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+                           <figcaption>HTML5</figcaption>
+                           <p>A Linguagem de Marcação de Hipertexto (HTML) é a linguagem principal da web.</p>
+                       </figure>
+                       <figure class="skill_card">
+                           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+                           <figcaption>CSS3</figcaption>
+                           <p>Cascading Style Sheets (ou simplesmente CSS), onde se define estilos para seu projeto web.</p>
+                        </figure>
+                       <figure class="skill_card">
+                           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" />
+                           <figcaption>Bootstrap</figcaption>
+                           <p>Framework com código-fonte aberto para desenvolvimento Front-end.</p>
+                        </figure>
+                       <figure class="skill_card">
+                           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+                           <figcaption>Javascript</figcaption>
+                           <p>JavaScript é uma das linguagens de programação mais populares e usadas no mundo.</p>
+                        </figure>
+                       <figure class="skill_card">
+                           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
+                           <figcaption>TypeScript</figcaption>
+                           <p>É um superconjunto sintático estrito de JavaScript e adiciona tipagem estática opcional à linguagem.</p>
+                        </figure>
+                       <figure class="skill_card">
+                           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" />
+                           <figcaption>NPM</figcaption>
+                           <p>Node Package Manager (NPM) é um kit de ferramentas para o desenvolvimento de aplicações baseadas em Node.js.</p>
+                        </figure>
+                       <figure class="skill_card">
+                           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+                           <figcaption>Python</figcaption>
+                           <p>É uma linguagem de programação de alto nível, dinâmica, interpretada, modular, multiplataforma e orientada a objetos</p>
+                        </figure>
+                       <figure class="skill_card">
+                           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
+                           <figcaption>VSCode</figcaption>
+                           <p>Editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS.</p>
+                        </figure>
+                       <figure class="skill_card">
+                           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" />
+                           <figcaption>Linux</figcaption>
+                           <p>Linux é um termo popularmente empregado para se referir a sistemas operacionais que utilizam o Kernel Linux.</p>
+                        </figure>
+                       <figure class="skill_card">
+                            <i class="fas fa-file-excel fa-3x"></i>
+                            <figcaption>Excel</figcaption>
+                            <p>Excel ou Microsoft Excel é um aplicativo de criação de planilhas eletrônicas. </p>
+                        </figure>
+                        
                    </div>
                 </div>
             </section><!--HARDSKILL END-->
@@ -119,192 +163,206 @@
                        </div>
 
                        <div class="portfolio_area"> <!--PORTFOLIO AREA START-->
-                            <div class="card_container"><!--CARD-->
-                                <div class="image">
-                                    <img src="assets/img/card.jpg" alt="background">
-                                </div>
                         
-                                <div class="card_content">
-                        
-                                    <h1 class="card_title">Projeto</h1>
-                                    
-                                    <p class="card_paragraph">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Repudiandae corporis
-                                    </p>
-                                    <div class="card_link">
-                                        <a href="#" target="_blank" rel="noopener noreferrer" title="Ver o código no Github"><i class="fab fa-github fa-lg"></i></a>
-                                        <a href="#" target="_blank" rel="noopener noreferrer" title="Acessar o projeto"><i class="fas fa-external-link-alt fa-lg"></i></a>
-                                    </div>
-                        
-                                </div>
-                            </div>
-                            <div class="card_container"><!--CARD-->
-                                <div class="image">
-                                    <img src="assets/img/card.jpg" alt="background">
-                                </div>
-                        
-                                <div class="card_content">
-                        
-                                    <h1 class="card_title">Projeto</h1>
-                                    
-                                    <p class="card_paragraph">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Repudiandae corporis
-                                    </p>
-                                    <div class="card_link">
-                                        <a href="#" target="_blank" rel="noopener noreferrer" title="Ver o código no Github"><i class="fab fa-github fa-lg"></i></a>
-                                        <a href="#" target="_blank" rel="noopener noreferrer" title="Acessar o projeto"><i class="fas fa-external-link-alt fa-lg"></i></a>
-                                    </div>
-                        
-                                </div>
-                            </div>
+                            <div class="area_content"><!-- Area Content Start-->
 
-                            <div class="card_container"><!--CARD-->
-                                <div class="image">
-                                    <img src="assets/img/card.jpg" alt="background">
-                                </div>
-                        
-                                <div class="card_content">
-                        
-                                    <h1 class="card_title">Projeto</h1>
-                                    
-                                    <p class="card_paragraph">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Repudiandae corporis
-                                    </p>
-                                    <div class="card_link">
-                                        <a href="#" target="_blank" rel="noopener noreferrer" title="Ver o código no Github"><i class="fab fa-github fa-lg"></i></a>
-                                        <a href="#" target="_blank" rel="noopener noreferrer" title="Acessar o projeto"><i class="fas fa-external-link-alt fa-lg"></i></a>
+                                <div class="card_container"><!--CARD-->
+                                    <div class="image">
+                                        <img src="assets/img/card.jpg" alt="background">
                                     </div>
-                        
+                            
+                                    <div class="card_content">
+                            
+                                        <h1 class="card_title">Projeto</h1>
+                                        
+                                        <p class="card_paragraph">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Repudiandae corporis
+                                        </p>
+                                        <div class="card_link">
+                                            <a href="#" target="_blank" rel="noopener noreferrer" title="Ver o código no Github"><i class="fab fa-github fa-lg"></i></a>
+                                            <a href="#" target="_blank" rel="noopener noreferrer" title="Acessar o projeto"><i class="fas fa-external-link-alt fa-lg"></i></a>
+                                        </div>
+                            
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="card_container"><!--CARD-->
+                                    <div class="image">
+                                        <img src="assets/img/card.jpg" alt="background">
+                                    </div>
+                            
+                                    <div class="card_content">
+                            
+                                        <h1 class="card_title">Projeto</h1>
+                                        
+                                        <p class="card_paragraph">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Repudiandae corporis
+                                        </p>
+                                        <div class="card_link">
+                                            <a href="#" target="_blank" rel="noopener noreferrer" title="Ver o código no Github"><i class="fab fa-github fa-lg"></i></a>
+                                            <a href="#" target="_blank" rel="noopener noreferrer" title="Acessar o projeto"><i class="fas fa-external-link-alt fa-lg"></i></a>
+                                        </div>
+                            
+                                    </div>
+                                </div>
+    
+                                <div class="card_container"><!--CARD-->
+                                    <div class="image">
+                                        <img src="assets/img/card.jpg" alt="background">
+                                    </div>
+                            
+                                    <div class="card_content">
+                            
+                                        <h1 class="card_title">Projeto</h1>
+                                        
+                                        <p class="card_paragraph">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Repudiandae corporis
+                                        </p>
+                                        <div class="card_link">
+                                            <a href="#" target="_blank" rel="noopener noreferrer" title="Ver o código no Github"><i class="fab fa-github fa-lg"></i></a>
+                                            <a href="#" target="_blank" rel="noopener noreferrer" title="Acessar o projeto"><i class="fas fa-external-link-alt fa-lg"></i></a>
+                                        </div>
+                            
+                                    </div>
+                                </div>
 
-                            <div class="card_container"><!--CARD-->
-                                <div class="image">
-                                    <img src="assets/img/card.jpg" alt="background">
-                                </div>
-                        
-                                <div class="card_content">
-                        
-                                    <h1 class="card_title">Projeto</h1>
-                                    
-                                    <p class="card_paragraph">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Repudiandae corporis
-                                    </p>
-                                    <div class="card_link">
-                                        <a href="#" target="_blank" rel="noopener noreferrer" title="Ver o código no Github"><i class="fab fa-github fa-lg"></i></a>
-                                        <a href="#" target="_blank" rel="noopener noreferrer" title="Acessar o projeto"><i class="fas fa-external-link-alt fa-lg"></i></a>
-                                    </div>
-                        
-                                </div>
-                            </div>
+                            </div><!-- Area content End-->
 
-                            <div class="card_container"><!--CARD-->
-                                <div class="image">
-                                    <img src="assets/img/card.jpg" alt="background">
-                                </div>
-                        
-                                <div class="card_content">
-                        
-                                    <h1 class="card_title">Projeto</h1>
-                                    
-                                    <p class="card_paragraph">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Repudiandae corporis
-                                    </p>
-                                    <div class="card_link">
-                                        <a href="#" target="_blank" rel="noopener noreferrer" title="Ver o código no Github"><i class="fab fa-github fa-lg"></i></a>
-                                        <a href="#" target="_blank" rel="noopener noreferrer" title="Acessar o projeto"><i class="fas fa-external-link-alt fa-lg"></i></a>
-                                    </div>
-                        
-                                </div>
-                            </div>
+                            <div class="area_content"><!-- Area Content Start-->
 
-                            <div class="card_container"><!--CARD-->
-                                <div class="image">
-                                    <img src="assets/img/card.jpg" alt="background">
-                                </div>
-                        
-                                <div class="card_content">
-                        
-                                    <h1 class="card_title">Projeto</h1>
-                                    
-                                    <p class="card_paragraph">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Repudiandae corporis
-                                    </p>
-                                    <div class="card_link">
-                                        <a href="#" target="_blank" rel="noopener noreferrer" title="Ver o código no Github"><i class="fab fa-github fa-lg"></i></a>
-                                        <a href="#" target="_blank" rel="noopener noreferrer" title="Acessar o projeto"><i class="fas fa-external-link-alt fa-lg"></i></a>
+                                <div class="card_container"><!--CARD-->
+                                    <div class="image">
+                                        <img src="assets/img/card.jpg" alt="background">
                                     </div>
-                        
+                            
+                                    <div class="card_content">
+                            
+                                        <h1 class="card_title">Projeto</h1>
+                                        
+                                        <p class="card_paragraph">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Repudiandae corporis
+                                        </p>
+                                        <div class="card_link">
+                                            <a href="#" target="_blank" rel="noopener noreferrer" title="Ver o código no Github"><i class="fab fa-github fa-lg"></i></a>
+                                            <a href="#" target="_blank" rel="noopener noreferrer" title="Acessar o projeto"><i class="fas fa-external-link-alt fa-lg"></i></a>
+                                        </div>
+                            
+                                    </div>
                                 </div>
-                            </div>
+    
+                                <div class="card_container"><!--CARD-->
+                                    <div class="image">
+                                        <img src="assets/img/card.jpg" alt="background">
+                                    </div>
+                            
+                                    <div class="card_content">
+                            
+                                        <h1 class="card_title">Projeto</h1>
+                                        
+                                        <p class="card_paragraph">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Repudiandae corporis
+                                        </p>
+                                        <div class="card_link">
+                                            <a href="#" target="_blank" rel="noopener noreferrer" title="Ver o código no Github"><i class="fab fa-github fa-lg"></i></a>
+                                            <a href="#" target="_blank" rel="noopener noreferrer" title="Acessar o projeto"><i class="fas fa-external-link-alt fa-lg"></i></a>
+                                        </div>
+                            
+                                    </div>
+                                </div>
+    
+                                <div class="card_container"><!--CARD-->
+                                    <div class="image">
+                                        <img src="assets/img/card.jpg" alt="background">
+                                    </div>
+                            
+                                    <div class="card_content">
+                            
+                                        <h1 class="card_title">Projeto</h1>
+                                        
+                                        <p class="card_paragraph">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Repudiandae corporis
+                                        </p>
+                                        <div class="card_link">
+                                            <a href="#" target="_blank" rel="noopener noreferrer" title="Ver o código no Github"><i class="fab fa-github fa-lg"></i></a>
+                                            <a href="#" target="_blank" rel="noopener noreferrer" title="Acessar o projeto"><i class="fas fa-external-link-alt fa-lg"></i></a>
+                                        </div>
+                            
+                                    </div>
+                                </div>
 
-                            <div class="card_container"><!--CARD-->
-                                <div class="image">
-                                    <img src="assets/img/card.jpg" alt="background">
-                                </div>
-                        
-                                <div class="card_content">
-                        
-                                    <h1 class="card_title">Projeto</h1>
-                                    
-                                    <p class="card_paragraph">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Repudiandae corporis
-                                    </p>
-                                    <div class="card_link">
-                                        <a href="#" target="_blank" rel="noopener noreferrer" title="Ver o código no Github"><i class="fab fa-github fa-lg"></i></a>
-                                        <a href="#" target="_blank" rel="noopener noreferrer" title="Acessar o projeto"><i class="fas fa-external-link-alt fa-lg"></i></a>
-                                    </div>
-                        
-                                </div>
-                            </div>
+                            </div><!-- Area content End-->
 
-                            <div class="card_container"><!--CARD-->
-                                <div class="image">
-                                    <img src="assets/img/card.jpg" alt="background">
-                                </div>
-                        
-                                <div class="card_content">
-                        
-                                    <h1 class="card_title">Projeto</h1>
-                                    
-                                    <p class="card_paragraph">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Repudiandae corpor
-                                    </p>
-                                    <div class="card_link">
-                                        <a href="#" target="_blank" rel="noopener noreferrer" title="Ver o código no Github"><i class="fab fa-github fa-lg"></i></a>
-                                        <a href="#" target="_blank" rel="noopener noreferrer" title="Acessar o projeto"><i class="fas fa-external-link-alt fa-lg"></i></a>
-                                    </div>
-                        
-                                </div>
-                            </div>
+                            <div class="area_content"><!-- Area Content Start-->
 
-                            <div class="card_container"><!--CARD-->
-                                <div class="image">
-                                    <img src="assets/img/card.jpg" alt="background">
-                                </div>
-                        
-                                <div class="card_content">
-                        
-                                    <h1 class="card_title">Projeto</h1>
-                                    
-                                    <p class="card_paragraph">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    </p>
-                                    <div class="card_link">
-                                        <a href="#" target="_blank" rel="noopener noreferrer" title="Ver o código no Github"><i class="fab fa-github fa-lg"></i></a>
-                                        <a href="#" target="_blank" rel="noopener noreferrer" title="Acessar o projeto"><i class="fas fa-external-link-alt fa-lg"></i></a>
+                                <div class="card_container"><!--CARD-->
+                                    <div class="image">
+                                        <img src="assets/img/card.jpg" alt="background">
                                     </div>
-                        
+                            
+                                    <div class="card_content">
+                            
+                                        <h1 class="card_title">Projeto</h1>
+                                        
+                                        <p class="card_paragraph">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Repudiandae corporis
+                                        </p>
+                                        <div class="card_link">
+                                            <a href="#" target="_blank" rel="noopener noreferrer" title="Ver o código no Github"><i class="fab fa-github fa-lg"></i></a>
+                                            <a href="#" target="_blank" rel="noopener noreferrer" title="Acessar o projeto"><i class="fas fa-external-link-alt fa-lg"></i></a>
+                                        </div>
+                            
+                                    </div>
                                 </div>
-                            </div>
+    
+                                <div class="card_container"><!--CARD-->
+                                    <div class="image">
+                                        <img src="assets/img/card.jpg" alt="background">
+                                    </div>
+                            
+                                    <div class="card_content">
+                            
+                                        <h1 class="card_title">Projeto</h1>
+                                        
+                                        <p class="card_paragraph">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Repudiandae corpor
+                                        </p>
+                                        <div class="card_link">
+                                            <a href="#" target="_blank" rel="noopener noreferrer" title="Ver o código no Github"><i class="fab fa-github fa-lg"></i></a>
+                                            <a href="#" target="_blank" rel="noopener noreferrer" title="Acessar o projeto"><i class="fas fa-external-link-alt fa-lg"></i></a>
+                                        </div>
+                            
+                                    </div>
+                                </div>
+    
+                                <div class="card_container"><!--CARD-->
+                                    <div class="image">
+                                        <img src="assets/img/card.jpg" alt="background">
+                                    </div>
+                            
+                                    <div class="card_content">
+                            
+                                        <h1 class="card_title">Projeto</h1>
+                                        
+                                        <p class="card_paragraph">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        </p>
+                                        <div class="card_link">
+                                            <a href="#" target="_blank" rel="noopener noreferrer" title="Ver o código no Github"><i class="fab fa-github fa-lg"></i></a>
+                                            <a href="#" target="_blank" rel="noopener noreferrer" title="Acessar o projeto"><i class="fas fa-external-link-alt fa-lg"></i></a>
+                                        </div>
+                            
+                                    </div>
+                                </div>
+
+                            </div><!-- Area content End-->                    
+
                        </div><!--PORTFOLIO AREA END-->
                     </div>
                 </div>
@@ -316,37 +374,13 @@
 
         <div class="footer">
 
-            <div class="footer_brandName">
-                <a href="#Home"><img src="assets/img/Logo-oficial.png" alt="logo" width="150"></a>
-            </div>
-
-            <div class="footer_menus">
-                <div class="menu_items">
-                    <span class="menu">MENU</span>
-                    <ul>
-                        <a href="#header_container"><li>Home</li></a>
-                        <a href="#container_about"><li>Sobre</li></a>
-                        <a href="#portfolio_container"><li>Portfólio</li></a>
-                        <a href="#container_hardSkill"><li>Hard Skills</li></a>
-                        <a href="#container_contact"><li>Contato</li></a>
-                    </ul>
-                </div>
-
-                <div class="menu_items">
-                    <span class="menu">REDE SOCIAIS</span>
-                    <ul>
-                        <a href="http://github.com/kevinfigueira" target="_blank" rel="noopener noreferrer" title="Contribute code on Github"><li>Github</li></a>
-                        <a href="https://www.linkedin.com/in/kevinfigueiradeveloper/" target="_blank" rel="noopener noreferrer" title="Connect with me on Linkedin"><li>LinkedIn</li></a>
-                        <a href="https://www.facebook.com/kevin.figueira.31/" target="_blank" rel="noopener noreferrer" title="Like me on Facebook"><li>Facebook</li></a>
-                        <a href="https://www.instagram.com/_kevinfigueira_/" target="_blank" rel="noopener noreferrer" title="Follow me on Instagram"><li>Instagram</li></a>
-                    </ul>
-                </div>
-            </div>
+           
 
         </div>
+
         <div class="copy">
             <div class="copy_content">
-                <p>Copyright &copy; 2021 Kevin Figueira</p>
+                <p>Copyright &copy; Kevin Figueira 2021, All rights reserved</p>
             </div>
         </div>
             
