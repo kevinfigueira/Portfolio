@@ -145,7 +145,6 @@ function activeOption(value){
 function activeButton(value){
     //Option class code
     let buttons = document.querySelectorAll(".portfolio_btn");
-    console.log(buttons)
     buttons.forEach(option => {
         //check if value equals innerText
         if(value.toUpperCase() == option.innerText.toUpperCase()){
