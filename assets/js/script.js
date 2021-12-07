@@ -125,3 +125,33 @@ card.forEach((element, i) => {
     })
 
 })
+
+// ==== Navagation ====
+// === //Parameter passed from button (Parameter same as category) ===
+function activeOption(value){
+    //Option class code
+    let options = document.querySelectorAll(".list_item");
+    options.forEach(option => {
+        //check if value equals innerText
+        if(value.toUpperCase() == option.innerText.toUpperCase()){
+            option.classList.add("active");
+        }else{
+            option.classList.remove("active");
+        }
+    })
+}
+
+// ==== Portfolio Buttons ====
+function activeButton(value){
+    //Option class code
+    let buttons = document.querySelectorAll(".portfolio_btn");
+    console.log(buttons)
+    buttons.forEach(option => {
+        //check if value equals innerText
+        if(value.toUpperCase() == option.innerText.toUpperCase()){
+            option.classList.add("active_btn");
+        }else{
+            option.classList.remove("active_btn");
+        }
+    })
+}

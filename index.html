@@ -26,11 +26,11 @@
 
             <nav class="header_navbar"><!--NAVBAR START-->
                 <ul class="navbar_list">
-                    <a href="index.html" class="active"><li class="list_item">Home</li></a>
-                    <a href="#container_about"><li class="list_item">Sobre</li></a>
-                    <a href="#container_portfolio"><li class="list_item">Portfólio</li></a>
-                    <a href="#container_hardSkill"><li class="list_item">Skills</li></a>
-                    <a href="#container_contact"><li class="list_item">Contato</li></a>
+                    <a href="index.html"><li class="list_item active" onclick="activeOption('Home')">Home</li></a>
+                    <a href="#container_about"><li class="list_item" onclick="activeOption('Sobre')">Sobre</li></a>
+                    <a href="#container_portfolio"><li class="list_item" onclick="activeOption('portfólio')">Portfólio</li></a>
+                    <a href="#container_hardSkill"><li class="list_item" onclick="activeOption('Skills')">Skills</li></a>
+                    <a href="#container_contact"><li class="list_item" onclick="activeOption('Contato')">Contato</li></a>
                 </ul>
             </nav><!--NAVBAR END-->
 
@@ -155,9 +155,9 @@
 
                     <div class="portfolio_project">
                        <div class="portfolio_buttons">
-                           <button type="button" class="active_btn">TODOS</button>
-                           <button type="button">POPULARES</button>
-                           <button type="button">MAIS RECENTE</button>
+                           <button type="button" class="portfolio_btn active_btn" onclick="activeButton('TODOS')">TODOS</button>
+                           <button type="button" class="portfolio_btn" onclick="activeButton('Populares')">POPULARES</button>
+                           <button type="button" class="portfolio_btn" onclick="activeButton('Mais Recente')">MAIS RECENTE</button>
                        </div>
 
                        <div class="portfolio_area"> <!--PORTFOLIO AREA START-->
@@ -367,7 +367,43 @@
             </section ><!--PORTFOLIO END-->
 
             <section id="container_contact">
-
+                <div class="contact">
+                    <div class="contact_presentation">
+                        <h2>Fale Comigo</h2>
+                        <p>
+                            Resta alguma dúvida? Preencha os campos abaixo com os seguintes dados que em breve entraremos em contato.
+                        </p>
+                    </div>
+                    <form action="" class="contact_form">
+                        <fieldset class="form_field">
+                            <div class="field_group">
+                                <label for="name">Name:</label>
+                                <input type="text" name="name" id="name" autocomplete="off" placeholder="Digite seu nome" required>
+                            </div>
+                            <div class="field_group">
+                                <label for="email">E-mail:</label>
+                                <input type="email" name="email" id="email" autocomplete="off" placeholder="Digite seu e-mail" required>
+                            </div>
+                        </fieldset>
+                        <fieldset class="form_field">
+                            <div class="field_group">
+                                <label for="tel">Telefone:</label>
+                                <input type="tel" name="tel" id="tel" autocomplete="off" required>
+                            </div>
+                            <div class="field_group max">
+                                <label for="subject">Assunto:</label>
+                                <input type="text" name="subject" id="subject" autocomplete="off" placeholder="Digite aqui" required>
+                            </div>
+                        </fieldset>
+                        <fieldset class="form_field">
+                            <div class="field_group">
+                                <label for="message">Mensagem:</label><br>
+                                <textarea name="message" id="message" cols="20" rows="10" spellcheck="false" autocapitalize="sentences" placeholder="Deixa sua mensagem aqui..."></textarea>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <button class="form_btn" type="submit" value="Enviar">Enviar contato <i class="fas fa-paper-plane fa-lg"></i></button>
+                </div>
             </section>
 
     </main><!--MAIN END-->
