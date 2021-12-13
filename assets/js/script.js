@@ -8,6 +8,20 @@ const cardContent = document.querySelectorAll('.card_content');
 
 // ================= Functions =================
 
+// ==== Navagation ====
+// === //Parameter passed from button ===
+function activeOption(value){
+    //Option class code
+    let options = document.querySelectorAll(".list_item");
+    options.forEach(option => {
+        //check if value equals innerText
+        if(value.toUpperCase() == option.innerText.toUpperCase()){
+            option.classList.add("active");
+        }else{
+            option.classList.remove("active");
+        }
+    })
+}
 
 // ==== Machine Effect ====
 function typeWrite(p, t, s){
@@ -126,26 +140,12 @@ card.forEach((element, i) => {
 
 })
 
-// ==== Navagation ====
-// === //Parameter passed from button (Parameter same as category) ===
-function activeOption(value){
-    //Option class code
-    let options = document.querySelectorAll(".list_item");
-    options.forEach(option => {
-        //check if value equals innerText
-        if(value.toUpperCase() == option.innerText.toUpperCase()){
-            option.classList.add("active");
-        }else{
-            option.classList.remove("active");
-        }
-    })
-}
-
 // ==== Portfolio Buttons ====
-function activeButton(value){
+
+function filterOption(value){
     //Option class code
     let buttons = document.querySelectorAll(".portfolio_btn");
-    buttons.forEach(option => {
+        buttons.forEach(option => {
         //check if value equals innerText
         if(value.toUpperCase() == option.innerText.toUpperCase()){
             option.classList.add("active_btn");
@@ -153,4 +153,21 @@ function activeButton(value){
             option.classList.remove("active_btn");
         }
     })
+
+    //Select all card
+    let elements = document.querySelectorAll(".card_container");
+
+    elements.forEach( element => {
+       if(value == "todos"){
+           element.classList.remove("hide");
+
+       }else{
+           if(element.classList.contains(value) == false){
+               element.classList.remove("hide");
+
+           }else{
+               element.classList.add("hide")
+           }
+       }
+   })
 }

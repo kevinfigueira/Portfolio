@@ -10,6 +10,7 @@
     <meta name="description" content="Desenvolvero Front-End">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
 
     <title>Portfolio</title>
@@ -32,6 +33,9 @@
                     <a href="#container_hardSkill"><li class="list_item" onclick="activeOption('Skills')">Skills</li></a>
                     <a href="#container_contact"><li class="list_item" onclick="activeOption('Contato')">Contato</li></a>
                 </ul>
+                <div class="navbar_icon">
+                    <i class="fas fa-bars fa-3x"></i>
+                </div>
             </nav><!--NAVBAR END-->
 
         </div>
@@ -155,16 +159,16 @@
 
                     <div class="portfolio_project">
                        <div class="portfolio_buttons">
-                           <button type="button" class="portfolio_btn active_btn" onclick="activeButton('TODOS')">TODOS</button>
-                           <button type="button" class="portfolio_btn" onclick="activeButton('Populares')">POPULARES</button>
-                           <button type="button" class="portfolio_btn" onclick="activeButton('Mais Recente')">MAIS RECENTE</button>
+                           <button type="button" class="portfolio_btn active_btn" onclick="filterOption('todos')">TODOS</button>
+                           <button type="button" class="portfolio_btn" onclick="filterOption('populares')">POPULARES</button>
+                           <button type="button" class="portfolio_btn" onclick="filterOption('recentes')">RECENTES</button>
                        </div>
 
                        <div class="portfolio_area"> <!--PORTFOLIO AREA START-->
                         
                             <div class="area_content"><!-- Area Content Start-->
 
-                                <div class="card_container"><!--CARD-->
+                                <div class="card_container recentes"><!--CARD-->
                                     <div class="image">
                                         <img src="assets/img/card.jpg" alt="background">
                                     </div>
@@ -184,7 +188,7 @@
                             
                                     </div>
                                 </div>
-                                <div class="card_container"><!--CARD-->
+                                <div class="card_container populares"><!--CARD-->
                                     <div class="image">
                                         <img src="assets/img/card.jpg" alt="background">
                                     </div>
@@ -205,7 +209,7 @@
                                     </div>
                                 </div>
     
-                                <div class="card_container"><!--CARD-->
+                                <div class="card_container recentes"><!--CARD-->
                                     <div class="image">
                                         <img src="assets/img/card.jpg" alt="background">
                                     </div>
@@ -230,7 +234,7 @@
 
                             <div class="area_content"><!-- Area Content Start-->
 
-                                <div class="card_container"><!--CARD-->
+                                <div class="card_container populares"><!--CARD-->
                                     <div class="image">
                                         <img src="assets/img/card.jpg" alt="background">
                                     </div>
@@ -251,7 +255,7 @@
                                     </div>
                                 </div>
     
-                                <div class="card_container"><!--CARD-->
+                                <div class="card_container recentes"><!--CARD-->
                                     <div class="image">
                                         <img src="assets/img/card.jpg" alt="background">
                                     </div>
@@ -272,7 +276,7 @@
                                     </div>
                                 </div>
     
-                                <div class="card_container"><!--CARD-->
+                                <div class="card_container recentes"><!--CARD-->
                                     <div class="image">
                                         <img src="assets/img/card.jpg" alt="background">
                                     </div>
@@ -297,7 +301,7 @@
 
                             <div class="area_content"><!-- Area Content Start-->
 
-                                <div class="card_container"><!--CARD-->
+                                <div class="card_container recentes"><!--CARD-->
                                     <div class="image">
                                         <img src="assets/img/card.jpg" alt="background">
                                     </div>
@@ -318,7 +322,7 @@
                                     </div>
                                 </div>
     
-                                <div class="card_container"><!--CARD-->
+                                <div class="card_container recentes"><!--CARD-->
                                     <div class="image">
                                         <img src="assets/img/card.jpg" alt="background">
                                     </div>
@@ -339,7 +343,7 @@
                                     </div>
                                 </div>
     
-                                <div class="card_container"><!--CARD-->
+                                <div class="card_container populares"><!--CARD-->
                                     <div class="image">
                                         <img src="assets/img/card.jpg" alt="background">
                                     </div>
@@ -371,7 +375,7 @@
                     <div class="contact_presentation">
                         <h2>Fale Comigo</h2>
                         <p>
-                            Resta alguma dúvida? Preencha os campos abaixo com os seguintes dados que em breve entraremos em contato.
+                            Resta alguma dúvida? Preencha os campos abaixo com os seguintes dados que em breve entrarei em contato.
                         </p>
                     </div>
                     <form action="" class="contact_form"><!-- Form start -->
