@@ -8,9 +8,52 @@ const cardContent = document.querySelectorAll('.card_content');
 
 // ================= Functions =================
 
+// === Navigation bar effects on scroll ===
+window.addEventListener("scroll", function(){
+    const header = this.document.querySelector("header");
+    header.classList.toggle("sticky", window.scrollY > 0);
+})
+
+// === Scroll to top button ===
+const scrollTopBtn = document.querySelector("#button_scroll");
+
+window.addEventListener("scroll", function(){
+    scrollTopBtn.classList.toggle("active", window.scrollY > 100)
+})
+
+scrollTopBtn.addEventListener("click", function(){
+    document.body.scrollTo = 0;
+    document.documentElement.scrollTop = 0;
+})
+
+// === Navigation menu items active on page scroll ===
+window.addEventListener("scroll", () => {
+    const sections = document.querySelectorAll("section");
+    const scrollY = window.pageYOffset;
+
+        if(window.scrollY > 0){
+            document.querySelector("#first").classList.remove("active");
+        }else{
+            document.querySelector("#first").classList.add("active");
+        }
+    
+    sections.forEach( current => {
+        
+        let sectionHeight = current.offsetHeight;
+        let sectionTop = current.offsetTop - 50;
+        let id = current.getAttribute("id");
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector(`.navbar_list a[href*=${id}]`).classList.add("active");
+        }else{
+            document.querySelector(`.navbar_list a[href*=${id}]`).classList.remove("active")
+        }
+    });
+});
+
 // ==== Navagation ====
 // === //Parameter passed from button ===
-function activeOption(value){
+/*function activeOption(value){
     //Option class code
     let options = document.querySelectorAll(".list_item");
     options.forEach(option => {
@@ -21,7 +64,11 @@ function activeOption(value){
             option.classList.remove("active");
         }
     })
-}
+}*/
+
+
+
+
 
 // ==== Machine Effect ====
 function typeWrite(p, t, s){

@@ -19,26 +19,116 @@ html, body{
     display: flex;
     flex-direction: column;
 }
-#container_wrapper, #container_about, #container_hardSkill, #container_footer, #container_contact{
+#container_wrapper, .about, .hardSkills, .contacts, #container_footer{
     width: 100%;
     display: flex;
     justify-content: center;
 }
-
+.about_title_01, .skill_title_01, .portfolio_tilte_01, .contact_title_01{
+    font-size: 4.5em;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    padding-top: 5rem; 
+    background: linear-gradient(to top, transparent 0%, #0e2431 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: .1;
+}
+.about_title_02, .skill_title_02, .portfolio_tilte_02, .contact_title_02{
+    font-size: 2.5em;
+    font-weight: 700;
+    transform: translateY(-80px);
+}
+.about_title_02::before, .skill_title_02::before, .portfolio_tilte_02::before, .contact_title_02::before{
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 5px;
+    right: 0;
+    bottom: 0;
+    background: #6a59d1;
+}
+/* ======================= BUTTON SCROLL ====================*/
+#button_scroll{
+    position: fixed;
+    right: 0;
+    bottom: 30px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: #000;
+    z-index: 99;
+    background-color: #7177ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: .5s ease;
+    cursor: pointer;
+}
+#button_scroll.active{
+    right: 20px;
+    pointer-events: all;
+    opacity: 1;
+}
+/* ======================= SCROLL BAR =======================*/
+::-webkit-scrollbar{
+    width: 10px;
+    background: #c5cadf;
+}
+::-webkit-scrollbar-thumb{
+    background: #70768a;
+    border-radius: 2em;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #454f6b;
+}
+/* ================= Light/Dark theme button =================*/
+.theme-btn{
+    z-index: 99;
+    position: fixed;
+    right: 0;
+    top: 100px;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0px 0px 20px rgb( 0 0 0 / 10%);
+    cursor: pointer;
+}
+.theme-btn .fa-sun{
+    display: none;
+}
 /* ========================== HEADER =======================*/
-#header{
+.header{
     width: 100%;
     display: flex;
     justify-content: center;
-    box-shadow: 0 0 20px #000;
-    position: fixed;
     z-index: 10;
-    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(20px);
+    transition: .6s ease;
+}
+.header.sticky{
+    background: rgba(255, 255, 255, .5);
+    box-shadow: 0px 0px 20px rgb( 0 0 0 / 20%);
 }
 .header_container{
     width: var(--container);
-    height: 5.5rem;
+    height:calc(4rem + 1rem);
     display: flex;
+    align-items: center;
+    transition: .6s ease;
+}
+.header.sticky .header_container{
+    height: calc(2.5rem + 1rem);
 }
 .header_brandName{
     flex: 1;
@@ -57,7 +147,7 @@ html, body{
     flex: 5;
 }
 .navbar_list{
-    height: 5.5rem;
+    height: inherit;
     display: flex;
     justify-content: end;
     align-items: center;
@@ -74,18 +164,7 @@ html, body{
 }
 .navbar_list .active{
     border-bottom: 2px solid var(--colorOne);
-}
-.navbar_icon{
-    height: 5.5rem;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-.navbar_icon i{
     color: #4997FF;
-    cursor: pointer;
-    margin-right: 5%;
-    display: none;
 }
 /* ==========================  CONTENT GENERAL  =======================*/
 
@@ -94,6 +173,7 @@ html, body{
     height: 90vh;
 }
 .wrapper{
+    position: relative;
     width: var(--container);
     display: flex;
 }
@@ -122,7 +202,25 @@ html, body{
 }
 .wrapper_subtitle::after{
     content: "|";
+    opacity: 0;
     animation: blink .7s infinite;
+}
+.scroll-down{
+    position: absolute;
+    bottom: 100px;
+}
+.scroll-down i{
+    color: #6a59d1;
+    font-size: 2.5em;
+    animation: arrow-down ease 2s infinite;
+}
+@keyframes arrow-down {
+    0%{
+        transform: translateY(0);
+    }
+    30%{
+        transform: translateY(10px);
+    }
 }
 /* ======= Social ======*/
 .wrapper_social{
@@ -160,21 +258,6 @@ html, body{
 }
 /* ======= Image ======*/
 /* ======= About ======*/
-.info_title, .portfolio_tilte, .skill_title{
-    font-size: 2rem;
-    padding-bottom: 1.25rem;
-    position: relative;
-    color: #212121;
-}
-.info_title::after, .portfolio_tilte::after, .skill_title::after{
-    content: '';
-    position: absolute;
-    width: 8.438rem;
-    height: 0.125rem;
-    background-color: var(--colorOne);
-    top: 2.5rem;
-    left: 1.875rem;
-}
 .info_about{
     flex: 1;
     font-size: 1.2rem;
@@ -186,6 +269,9 @@ html, body{
 }
 .info_about:not(:last-child){
     margin-bottom: 1rem;
+}
+.about_title_02::before{
+    left: 135px;
 }
 .about_btn{
     position: relative;
@@ -204,7 +290,7 @@ html, body{
     color: #fff;
 }
 /* ======================= HARD SKILL =====================*/
-#container_hardSkill{
+.hardSkills{
     padding: 3rem 0;
 }
 .hardSkill{
@@ -213,16 +299,6 @@ html, body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-.skill_title{
-    flex: 1;
-    padding: 2.5rem 0;
-    color: #212121;
-}
-.skill_title::after{
-    width: 4.438rem;
-    top: 5rem;
-    left: 0.875rem;
 }
 .hardSkill .skill_content{
     display: flex;
@@ -245,7 +321,7 @@ html, body{
     transition: all .5s ease;
 }
 .hardSkill .skill_content .skill_card:hover{
-    border: 1px solid red;
+    border: 1px solid #4997FF;
     transition: .5s ease;
 }
 .skill_content .skill_card img{
@@ -267,7 +343,7 @@ html, body{
     line-height: 1.4rem;
 }
 /* ======================= PORTFOLIO =====================*/
-#container_portfolio{
+.portfolios{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -278,14 +354,6 @@ html, body{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.portfolio_tilte{
-    padding: 2.5rem 0;
-}
-.portfolio_tilte::after{
-    width: 7.5rem;
-    left: 0.938rem;
-    top: 5rem;
 }
 .portfolio_project{
     flex: 1;
@@ -405,7 +473,7 @@ html, body{
     display: none;
 }
 /* ========================= CONTACT =======================*/
-#container_contact{
+.contacts{
     display: flex;
     justify-content: center;
 }
@@ -427,11 +495,16 @@ html, body{
     align-items: center;
     flex-wrap: wrap;
 }
-.contact_presentation h2{
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 500;
-    padding: 20px 0;
+.contact_presentation{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.contact_title_02::before{
+    right: 55px;
+    bottom: 5px;
 }
 .contact_presentation p{
     font-size: .9rem;
@@ -472,7 +545,7 @@ html, body{
     resize: none;
 }
 .form_btn{
-    width: 250px;
+    width: 150px;
     margin: 20px;
     padding: 10px 20px;
     border-radius: 20px;
@@ -627,12 +700,6 @@ html, body{
 @media (max-width: 768px) {  
     .wrapper_info .wrapper_text .wrapper_title {
         font-size: 2.5rem;
-    }
-    .navbar_list{
-        display: none;
-    }
-    .navbar_icon i{
-        display: flex;
     }
     .portfolio_buttons {
         justify-content: center;
