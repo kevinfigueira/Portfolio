@@ -1,4 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+:root{
+    /* === Background === */
+    --body-color: #F7F7F8;
+    --bg-stick: rgba(255, 255, 255, 0.5);
+    --bg-theme: rgba(0, 0, 0, 0.1);
+    --bg-title-1:  linear-gradient(to top, transparent 0%, #0e2431 70%);
+
+    /* === Color === */
+    --colorTwo: #282A36;
+    --colorOne: #4997FF;
+
+    /* === borders === */
+    --boder-card: 1px solid rgb(32 35 0 / 30%);
+
+    /* === box shadow === */
+    --boxShadow-card: 5px 5px 0 rgb(32 33 37 / 5%);
+    --boxShadowCard-hover: 10px 10px 0px rgba(0, 0, 0, 0.2);
+
+
+    /* === Other Settings === */
+    --container: 75rem;
+    --height: calc(100vh - 5rem);
+    --top: 5.5rem; 
+}
+/* ================= Light/Dark theme  =================*/
+.dark-theme:root{
+    /* === Background === */
+    --body-color: #282A36;
+    --bg-stick: rgba(64, 64, 64, 0.6);
+    --bg-theme: rgba(255, 255, 255, 0.5);
+    --bg-title-1:  linear-gradient(to top, transparent 0%, #F7F7F8 70%);
+
+    /* === Color === */
+    --colorTwo: #F7F7F8;
+
+    /* === borders === */
+    --boder-card: 1px solid rgb(255 255 255 / 30%);
+
+    /* === box shadow === */
+    --boxShadow-card: 5px 5px 0 rgb(255 255 255 / 20%);
+    --boxShadowCard-hover: 10px 10px 0px rgba(255, 255, 255, 0.2);
+
+}
 *{
     margin: 0;
     padding: 0;
@@ -9,11 +52,8 @@ html, body{
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
-:root{
-    --container: 75rem;
-    --colorOne: #4997FF;
-    --height: calc(100vh - 5rem);
-    --top: 5.5rem; 
+body{
+    background-color: var(--body-color);
 }
 #container{
     display: flex;
@@ -29,7 +69,7 @@ html, body{
     font-weight: 800;
     margin-bottom: 2rem;
     padding-top: 5rem; 
-    background: linear-gradient(to top, transparent 0%, #0e2431 70%);
+    background: var(--bg-title-1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: .1;
@@ -38,6 +78,7 @@ html, body{
     font-size: 2.5em;
     font-weight: 700;
     transform: translateY(-80px);
+    color: var(--colorTwo);
 }
 .about_title_02::before, .skill_title_02::before, .portfolio_tilte_02::before, .contact_title_02::before{
     content: '';
@@ -46,7 +87,7 @@ html, body{
     height: 5px;
     right: 0;
     bottom: 0;
-    background: #6a59d1;
+    background: var(--colorOne);
 }
 /* ======================= BUTTON SCROLL ====================*/
 #button_scroll{
@@ -58,7 +99,7 @@ html, body{
     border-radius: 50%;
     color: #000;
     z-index: 99;
-    background-color: #7177ff;
+    background-color: var(--colorOne);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,13 +124,13 @@ html, body{
 ::-webkit-scrollbar-thumb:hover{
     background: #454f6b;
 }
-/* ================= Light/Dark theme button =================*/
+/* ================= button Theme Light/Dark =================*/
 .theme-btn{
     z-index: 99;
     position: fixed;
     right: 0;
     top: 100px;
-    background: rgba(0, 0, 0, 0.1);
+    background: var(--bg-theme);
     backdrop-filter: blur(20px);
     width: 45px;
     height: 45px;
@@ -103,6 +144,7 @@ html, body{
 }
 .theme-btn .fa-sun{
     display: none;
+    color: var(--colorTwo);
 }
 /* ========================== HEADER =======================*/
 .header{
@@ -116,8 +158,9 @@ html, body{
     backdrop-filter: blur(20px);
     transition: .6s ease;
 }
+/* === stick === */
 .header.sticky{
-    background: rgba(255, 255, 255, .5);
+    background: var(--bg-stick);
     box-shadow: 0px 0px 20px rgb( 0 0 0 / 20%);
 }
 .header_container{
@@ -140,8 +183,12 @@ html, body{
     justify-content: center;
     align-items: center;
 }
+.header.sticky .header_brandName > a > img{
+    height: 50px;
+}
 .header_brandName > a > img{
     height: 60px;
+    transition: 1s ease;
 }
 .header_navbar{
     flex: 5;
@@ -149,14 +196,15 @@ html, body{
 .navbar_list{
     height: inherit;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     list-style: none;
 }
 .navbar_list > a{
     text-decoration: none;
     color: #212121;
-    margin-right: 3.5rem;
+    margin: 2rem;
+    color: var(--colorTwo);
 }
 .navbar_list > a:hover{
     color: #4997FF;
@@ -165,6 +213,18 @@ html, body{
 .navbar_list .active{
     border-bottom: 2px solid var(--colorOne);
     color: #4997FF;
+}
+/* ================= Menu Hambuguer =================*/
+.mobile-menu{
+    display: none;
+    cursor: pointer;
+}
+.mobile-menu div{
+    width: 36px;
+    height: 2px;
+    background-color: var(--colorTwo);
+    margin: 8px;
+    transition: .3s;
 }
 /* ==========================  CONTENT GENERAL  =======================*/
 
@@ -191,9 +251,11 @@ html, body{
 }
 .wrapper_paragraph{
     font-size: 1.5rem;
+    color: var(--colorTwo);
 }
 .wrapper_title{
     font-size: 4.5rem;
+    color: var(--colorTwo);
 }
 .wrapper_subtitle{
     font-weight: 600;
@@ -205,12 +267,13 @@ html, body{
     opacity: 0;
     animation: blink .7s infinite;
 }
+/* ==== Scroll Down ==== */
 .scroll-down{
     position: absolute;
     bottom: 100px;
 }
 .scroll-down i{
-    color: #6a59d1;
+    color: var(--colorOne);
     font-size: 2.5em;
     animation: arrow-down ease 2s infinite;
 }
@@ -230,6 +293,7 @@ html, body{
 .wrapper_social > a{
     color: #212121;
     margin-right: 1rem;
+    color: var(--colorTwo);
 }
 .wrapper_social > a > i:hover{
     color: #4997FF;
@@ -251,12 +315,17 @@ html, body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10rem 0;
+    padding: 6rem 0;
 }
 .about_img, .about_info{
     flex: 1;
+    position: relative;
 }
 /* ======= Image ======*/
+.about_img{
+    position: relative;
+    top: 100px;
+}
 /* ======= About ======*/
 .info_about{
     flex: 1;
@@ -266,6 +335,7 @@ html, body{
     word-wrap: break-word;
     line-height: 2rem;
     text-indent: 1.25rem;
+    color: var(--colorTwo);
 }
 .info_about:not(:last-child){
     margin-bottom: 1rem;
@@ -312,7 +382,8 @@ html, body{
     height: 240px;
     margin-bottom: 1rem;
     padding: .5rem;
-    border: 1px solid rgb(32 35 0 / 30%);
+    border: var(--boder-card);
+    color: var(--colorTwo);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -362,6 +433,7 @@ html, body{
 }
 .portfolio_buttons{
     display: flex;
+    justify-content: center;
     padding: 1.25rem;
 }
 .portfolio_buttons button{
@@ -371,7 +443,8 @@ html, body{
     border:none;
     cursor: pointer;
     font-size: 1.2rem;
-    background-color: #fff;
+    background: none;
+    color: var(--colorTwo);
 }
 .portfolio_buttons button:not(:last-child){
     margin-right: 1.5rem;
@@ -380,7 +453,12 @@ html, body{
     margin-left: 0rem;
 }
 .portfolio_buttons .active_btn{
-    border-bottom: 2px solid var(--colorOne);
+    width: 150px;
+    height: 35px;
+    background-color: var(--colorOne);
+    border-radius: 15px;
+    color: #fff;
+   
 }
 .portfolio_area{
     display: flex;
@@ -398,7 +476,7 @@ html, body{
     height: 350px;
     overflow: hidden;
     transition: all .3s;
-    box-shadow: 5px 5px 0 rgb(32 33 37 / 5%);
+    box-shadow: var(--boxShadow-card);
     border: 1px solid rgb(32 33 37 / 15%);
     border-radius: 8px;
     margin: 1rem;
@@ -406,7 +484,7 @@ html, body{
 }
 .card_container:hover{
     transition: all .5s;
-    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--boxShadowCard-hover);
     transform: translateY(-10px);
 }
 .card_container .image img{
@@ -427,10 +505,10 @@ html, body{
     height: 300px;
 }
 .area_content:nth-child(3) .card_container:nth-child(1){
-    height: 400px;
+    height: 370px;
 }
 .area_content:nth-child(3) .card_container:nth-child(3){
-    height: 250px;
+    height: 280px;
 }
 .card_content{
     position: absolute;
@@ -509,6 +587,7 @@ html, body{
 .contact_presentation p{
     font-size: .9rem;
     padding: 15px 0;
+    color: var(--colorTwo);
 }
 .form_field{
     width: 95%;
@@ -517,6 +596,7 @@ html, body{
     justify-content: center;
     align-items: center;
     border: none;
+    color: var(--colorTwo);
 }
 .field_group{
     display: flex;
@@ -542,6 +622,7 @@ html, body{
     line-height: 1.5;
     font-size: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.171);
+    border-radius: 20px;
     resize: none;
 }
 .form_btn{
@@ -570,7 +651,9 @@ html, body{
     display: flex;
     flex-direction: column; 
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
+    color: var(--colorTwo);
 }
 .footer_brandName, .footer_menu, .footer_social{
     display: flex;
@@ -595,16 +678,20 @@ html, body{
     margin: 1.5rem;
     padding: .5rem;
     text-decoration: none;
-    color: #212121;
+    color: var(--colorTwo);
 }
 .footer_social > a{
-    color: #212121;
+    color: var(--colorTwo);
     margin-left: 1.5rem;
 }
 .footer_social > a:hover{
     color: #4997FF;
 }
-
+.footer small{
+    padding-top: .4rem;
+    margin-left: 30px;
+    font-size: 1rem;
+}
 .copy{
     display: flex;
     justify-content: center;
@@ -632,8 +719,34 @@ html, body{
     .header_brandName > a > img {
         margin-left: 20px;
     }
+    .about_content .about_title_01 {
+        font-size: 3em;
+    }
     #container #container_wrapper .wrapper_subtitle {
         font-size: 1.5rem;
+    }
+    .skill_title_01{
+        font-size: 3.5rem;
+    }
+    .hardSkills .hardSkill .skill_content .skill_card {
+        width: 250px;
+        height: 200px;
+    }
+    .portfolio_tilte_01{
+        font-size: 3rem;
+    }
+    .portfolio_buttons button:not(:last-child) {
+        margin-right: 1rem;
+    }
+    .portfolio_project .portfolio_buttons .active_btn {
+        width: 100px;
+    }
+    .contact .contact_presentation .contact_title_01 {
+        font-size: 2.5em;
+    }
+    .contact_title_02 {
+        font-size: 2rem;
+        transform: translateY(-70px);
     }
     .copy p {
         font-size: 0.7rem;
@@ -645,6 +758,15 @@ html, body{
     }
     .hardSkill .skill_content {
         padding: 0.2rem;
+    }
+    .portfolio_buttons button{
+        font-size: 1rem;
+    }
+    .portfolio_buttons .active_btn {
+        width: 125px;
+    }
+    .contact_presentation .contact_title_01 {
+        font-size: 3em;
     }
 }
 @media (max-width: 425px) {
@@ -665,9 +787,15 @@ html, body{
         font-size: 0.8rem;
         line-height: 1.2rem;
     }
+    .portfolio_tilte_01{
+        font-size: 3.5rem;
+    }
 }
 /* Small devices (landscape phones, 576px and up)*/
 @media (max-width: 576px) {
+    .header_brandName > a{
+        justify-content: flex-end;
+    }
     .wrapper_info .wrapper_text{
         flex: 2;
     }
@@ -691,6 +819,9 @@ html, body{
     .portfolio_buttons {
         justify-content: center;
     }
+    .contact_title_01{
+        font-size: 3.5em;
+    }
     .contact_form {
         width: 90%;
     }
@@ -698,11 +829,93 @@ html, body{
 
 /* Medium devices (tablets, 768px and up)*/
 @media (max-width: 768px) {  
+    body{
+        overflow: hidden;
+    }
+    .header_navbar{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .navbar_list{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50vw;
+        height: 100vh;
+        background-color:var(--colorOne);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: .3s ease-in;
+        margin-right: 0;
+        transform: translateX(100%);
+    }
+    .navbar_list a {
+       text-align: center;
+        color: #23232e;;
+    }
+    .navbar_list a{
+        animation: navLinkFade ease 2s;
+    }
+    .mobile-menu{
+        display: block;
+        padding-right: 2rem;
+        z-index: 99;
+    }
+    .navbar_list.active{
+        transform: translateX(0);
+    }
+    .mobile-menu.active .line1{
+        transform: rotate(-45deg) translate(-8px, 8px);
+    }
+    .mobile-menu.active .line2{
+        opacity: 0;
+    }
+    .mobile-menu.active .line3{
+        transform: rotate(45deg) translate(-5px, -7px);
+    }
+    @keyframes navLinkFade {
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        top {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    .navbar_list .active{
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 20px;
+        background-color: #fff;
+        color: #23232e;
+        border-bottom: 2px solid #23232e;
+    }
+
     .wrapper_info .wrapper_text .wrapper_title {
         font-size: 2.5rem;
     }
+    .about_title_01{
+        font-size: 3.5em;
+    }
     .portfolio_buttons {
         justify-content: center;
+    }
+    .info_about{
+        font-size: 1rem;
+        position: relative;
+        bottom: 45px;
+    }
+    .about_img {
+        top: 41px;
+    }
+    .about_content .about_btn{
+        top: -0.75rem;
+    }
+    .hardSkill .skill_title_01{
+        padding-top: 1rem;
     }
     .contact_form{
         width: 100%;
@@ -716,7 +929,7 @@ html, body{
 /* Large devices (desktops, 992px and up)*/
 @media (max-width: 992px) {  
     .wrapper_text{
-        flex: 3;
+        flex: 2;
     }
     .wrapper_text .wrapper_title {
         font-size: 3rem;
@@ -724,12 +937,14 @@ html, body{
     .wrapper_img img{
         width: 110%;
         align-items: center;
-        margin-bottom: -100px;
     }
 }
 
 /* X-Large devices (large desktops, 1200px and up)*/
-@media (max-width: 1200px) {  
+@media (max-width: 1200px) { 
+    .about_title_01, .skill_title_01{
+        padding-top: 2rem;
+    } 
     .wrapper_title {
         font-size: 4rem;
     }
@@ -753,5 +968,8 @@ html, body{
 }
 
 /* XX-Large devices (larger desktops, 1400px and up)*/
-@media (min-width: 1400px) {  
+@media (max-width: 1400px) {  
+    .about_title_01, .skill_title_01{
+        padding-top: -2rem;
+    }
 }

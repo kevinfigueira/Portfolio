@@ -51,6 +51,20 @@ window.addEventListener("scroll", () => {
     });
 });
 
+// === Menu hambuguer ===
+const menuHamb = document.querySelector(".mobile-menu");
+const navBarList =document.querySelector(".navbar_list");
+
+menuHamb.addEventListener("click", () => {
+    navBarList.classList.toggle("active");
+
+    if(navBarList.classList.contains("active")){
+        menuHamb.classList.add("active")
+    }else{
+        menuHamb.classList.remove("active")
+    }
+})
+
 // ==== Navagation ====
 // === //Parameter passed from button ===
 /*function activeOption(value){
@@ -67,6 +81,24 @@ window.addEventListener("scroll", () => {
 }*/
 
 
+// === Website dark/light theme ===
+const html = document.querySelector("html");
+const themeBtn = document.querySelector(".theme-btn");
+
+themeBtn.addEventListener('click', () => {
+
+    html.classList.toggle("dark-theme");
+
+    if(html.classList.contains("dark-theme")){
+        document.querySelector(".fa-moon").style.display = "none";
+        document.querySelector(".fa-sun").style.display = "block";
+
+    }else{
+        document.querySelector(".fa-moon").style.display = "block";
+        document.querySelector(".fa-sun").style.display = "none";
+    }
+
+})
 
 
 
