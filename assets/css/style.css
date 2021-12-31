@@ -59,28 +59,43 @@ body{
     display: flex;
     flex-direction: column;
 }
-#container_wrapper, .about, .hardSkills, .contacts, #container_footer{
+#container_wrapper, 
+.about, 
+.hardSkills, 
+.contacts, 
+#container_footer{
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.about_title_01, .skill_title_01, .portfolio_tilte_01, .contact_title_01{
+.about_title_01, 
+.skill_title_01, 
+.portfolio_tilte_01, 
+.contact_title_01{
     font-size: 4.5em;
     font-weight: 800;
     margin-bottom: 2rem;
     padding-top: 5rem; 
     background: var(--bg-title-1);
     -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
     -webkit-text-fill-color: transparent;
-    opacity: .1;
+    opacity: .5;
 }
-.about_title_02, .skill_title_02, .portfolio_tilte_02, .contact_title_02{
+.about_title_02, 
+.skill_title_02, 
+.portfolio_tilte_02, 
+.contact_title_02{
     font-size: 2.5em;
     font-weight: 700;
     transform: translateY(-80px);
     color: var(--colorTwo);
 }
-.about_title_02::before, .skill_title_02::before, .portfolio_tilte_02::before, .contact_title_02::before{
+.about_title_02::before, 
+.skill_title_02::before, 
+.portfolio_tilte_02::before, 
+.contact_title_02::before{
     content: '';
     position: absolute;
     width: 70px;
@@ -132,6 +147,9 @@ body{
     top: 100px;
     background: var(--bg-theme);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    -moz-backdrop-filter: blur(20px);
+    
     width: 45px;
     height: 45px;
     display: flex;
@@ -156,6 +174,9 @@ body{
     top: 0;
     left: 0;
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    -moz-backdrop-filter: blur(20px);
+    
     transition: .6s ease;
 }
 /* === stick === */
