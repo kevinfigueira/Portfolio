@@ -736,118 +736,51 @@ body{
     }
 }
 /* ======================= @Media =======================*/
-@media (max-width: 320px) {
-    .header_brandName > a > img {
-        margin-left: 20px;
-    }
-    .about_content .about_title_01 {
-        font-size: 3em;
-    }
-    #container #container_wrapper .wrapper_subtitle {
-        font-size: 1.5rem;
-    }
-    .skill_title_01{
-        font-size: 3.5rem;
-    }
-    .hardSkills .hardSkill .skill_content .skill_card {
-        width: 250px;
-        height: 200px;
-    }
-    .portfolio_tilte_01{
-        font-size: 3rem;
-    }
-    .portfolio_buttons button:not(:last-child) {
-        margin-right: 1rem;
-    }
-    .portfolio_project .portfolio_buttons .active_btn {
-        width: 100px;
-    }
-    .contact .contact_presentation .contact_title_01 {
-        font-size: 2.5em;
-    }
-    .contact_title_02 {
-        font-size: 2rem;
-        transform: translateY(-70px);
-    }
-    .copy p {
-        font-size: 0.7rem;
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (max-width: 1400px) {  
+    .about_title_01, .skill_title_01{
+        padding-top: -2rem;
     }
 }
-@media (max-width: 375px) {
-    .info_about {
-        font-size: 1rem;
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (max-width: 1200px) { 
+    .about_title_01, .skill_title_01{
+        padding-top: 2rem;
+    } 
+    .wrapper_title {
+        font-size: 4rem;
     }
-    .hardSkill .skill_content {
-        padding: 0.2rem;
-    }
-    .portfolio_buttons button{
-        font-size: 1rem;
-    }
-    .portfolio_buttons .active_btn {
-        width: 125px;
-    }
-    .contact_presentation .contact_title_01 {
-        font-size: 3em;
-    }
-}
-@media (max-width: 425px) {
-    #container_wrapper .wrapper_info .wrapper_text {
-        flex: 3;
-    }
-    #container_wrapper .wrapper_info .wrapper_subtitle {
+    .wrapper_subtitle {
         font-size: 2rem;
     }
-    .hardSkill .skill_content {
-        justify-content: space-evenly;
+    .wrapper_info{
+        padding-left: 20px;
     }
-    .hardSkill .skill_content .skill_card {
-        width: 165px;
-        height: 240px;
+    .wrapper_img img{
+        width: 130%;
+        margin-top: 60px;
+        padding-right: 50px;
     }
-    .hardSkill .skill_content .skill_card p {
-        font-size: 0.8rem;
-        line-height: 1.2rem;
+    .about_info{
+        padding: 25px;
     }
-    .portfolio_tilte_01{
-        font-size: 3.5rem;
+    .about_content {
+        padding: 4rem 0;
     }
 }
-/* Small devices (landscape phones, 576px and up)*/
-@media (max-width: 576px) {
-    .header_brandName > a{
-        justify-content: flex-end;
-    }
-    .wrapper_info .wrapper_text{
+/* Large devices (desktops, 992px and up)*/
+@media (max-width: 992px) {  
+    .wrapper_text{
         flex: 2;
     }
-    #container_wrapper .wrapper_title {
-        font-size: 3.5rem;
+    .wrapper_text .wrapper_title {
+        font-size: 3rem;
     }
-    #container_wrapper .wrapper_subtitle {
-        font-size: 2.2rem;
-    }
-    .wrapper_img{
-        display: none;
-    }
-    .about_content{
-        flex-direction: column;
-        padding: 3.5rem 0
-    }
-    .about_content .about_img{
-        display: flex;
-        justify-content: center;
-    }
-    .portfolio_buttons {
-        justify-content: center;
-    }
-    .contact_title_01{
-        font-size: 3.5em;
-    }
-    .contact_form {
-        width: 90%;
+    .wrapper_img img{
+        width: 110%;
+        align-items: center;
     }
 }
-
 /* Medium devices (tablets, 768px and up)*/
 @media (max-width: 768px) {  
     body{
@@ -946,51 +879,114 @@ body{
         padding: 0px 5%;
     }
 }
-
-/* Large devices (desktops, 992px and up)*/
-@media (max-width: 992px) {  
-    .wrapper_text{
+/* Small devices (landscape phones, 576px and up)*/
+@media (max-width: 576px) {
+    .header_brandName > a{
+        justify-content: flex-end;
+    }
+    .wrapper_info .wrapper_text{
         flex: 2;
     }
-    .wrapper_text .wrapper_title {
-        font-size: 3rem;
+    #container_wrapper .wrapper_title {
+        font-size: 3.5rem;
     }
-    .wrapper_img img{
-        width: 110%;
-        align-items: center;
+    #container_wrapper .wrapper_subtitle {
+        font-size: 2.2rem;
+    }
+    .wrapper_img{
+        display: none;
+    }
+    .about_content{
+        flex-direction: column;
+        padding: 3.5rem 0
+    }
+    .about_content .about_img{
+        display: flex;
+        justify-content: center;
+    }
+    .portfolio_buttons {
+        justify-content: center;
+    }
+    .contact_title_01{
+        font-size: 3.5em;
+    }
+    .contact_form {
+        width: 90%;
     }
 }
-
-/* X-Large devices (large desktops, 1200px and up)*/
-@media (max-width: 1200px) { 
-    .about_title_01, .skill_title_01{
-        padding-top: 2rem;
-    } 
-    .wrapper_title {
-        font-size: 4rem;
+@media (max-width: 425px) {
+    #container_wrapper .wrapper_info .wrapper_text {
+        flex: 3;
     }
-    .wrapper_subtitle {
+    #container_wrapper .wrapper_info .wrapper_subtitle {
         font-size: 2rem;
     }
-    .wrapper_info{
-        padding-left: 20px;
+    .hardSkill .skill_content {
+        justify-content: space-evenly;
     }
-    .wrapper_img img{
-        width: 130%;
-        margin-top: 60px;
-        padding-right: 50px;
+    .hardSkill .skill_content .skill_card {
+        width: 165px;
+        height: 240px;
     }
-    .about_info{
-        padding: 25px;
+    .hardSkill .skill_content .skill_card p {
+        font-size: 0.8rem;
+        line-height: 1.2rem;
     }
-    .about_content {
-        padding: 4rem 0;
+    .portfolio_tilte_01{
+        font-size: 3.5rem;
     }
 }
-
-/* XX-Large devices (larger desktops, 1400px and up)*/
-@media (max-width: 1400px) {  
-    .about_title_01, .skill_title_01{
-        padding-top: -2rem;
+@media (max-width: 375px) {
+    .info_about {
+        font-size: 1rem;
+    }
+    .hardSkill .skill_content {
+        padding: 0.2rem;
+    }
+    .portfolio_buttons button{
+        font-size: 1rem;
+    }
+    .portfolio_buttons .active_btn {
+        width: 125px;
+    }
+    .contact_presentation .contact_title_01 {
+        font-size: 3em;
+    }
+}
+@media (max-width: 320px) {
+    .header_brandName > a > img {
+        margin-left: 20px;
+    }
+    .about_content .about_title_01 {
+        font-size: 3em;
+    }
+    #container #container_wrapper .wrapper_subtitle {
+        font-size: 1.5rem;
+    }
+    .skill_title_01{
+        font-size: 3.5rem;
+    }
+    .hardSkills .hardSkill .skill_content .skill_card {
+        width: 250px;
+        height: 200px;
+    }
+    .portfolio_tilte_01{
+        font-size: 3rem;
+    }
+    .portfolio_buttons button:not(:last-child) {
+        margin-right: 1rem;
+    }
+    .portfolio_project .portfolio_buttons .active_btn {
+        width: 100px;
+    }
+    .contact .contact_presentation .contact_title_01 {
+        font-size: 2.5em;
+    }
+    .contact_title_02 {
+        font-size: 2rem;
+        transform: translateY(-70px);
+    }
+    .copy p {
+        font-size: 0.7rem;
     }
 }
