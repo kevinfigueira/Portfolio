@@ -80,28 +80,6 @@ menuHamb.addEventListener("click", () => {
     })
 }*/
 
-
-// === Website dark/light theme ===
-const html = document.querySelector("html");
-const themeBtn = document.querySelector(".theme-btn");
-
-themeBtn.addEventListener('click', () => {
-
-    html.classList.toggle("dark-theme");
-
-    if(html.classList.contains("dark-theme")){
-        document.querySelector(".fa-moon").style.display = "none";
-        document.querySelector(".fa-sun").style.display = "block";
-
-    }else{
-        document.querySelector(".fa-moon").style.display = "block";
-        document.querySelector(".fa-sun").style.display = "none";
-    }
-
-})
-
-
-
 // ==== Machine Effect ====
 function typeWrite(p, t, s){
     const paragraph = p.innerHTML.split('');
