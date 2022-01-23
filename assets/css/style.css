@@ -1,35 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
-:root{
-    /* === Background === */
-    --body-color: #F7F7F8;
-    --bg-stick: rgba(255, 255, 255, 0.5);
-    --bg-theme: rgba(0, 0, 0, 0.1);
-    --bg-title-1:  linear-gradient(to top, transparent 0%, #0e2431 70%);
 
-    /* === Color === */
-    --colorTwo: #282A36;
-    --colorOne: #4997FF;
-
-    /* === borders === */
-    --boder-card: 1px solid rgb(32 35 0 / 30%);
-
-    /* === box shadow === */
-    --boxShadow-card: 5px 5px 0 rgb(32 33 37 / 5%);
-    --boxShadowCard-hover: 10px 10px 0px rgba(0, 0, 0, 0.2);
-
-
-    /* === Other Settings === */
-    --container: 75rem;
-    --height: calc(100vh - 5rem);
-    --top: 5.5rem; 
-}
 /* ================= Light/Dark theme  =================*/
-.dark-theme:root{
+:root{
     /* === Background === */
     --body-color: #282A36;
     --bg-stick: rgba(64, 64, 64, 0.6);
     --bg-theme: rgba(255, 255, 255, 0.5);
     --bg-title-1:  linear-gradient(to top, transparent 0%, #F7F7F8 70%);
+    --bg-area-1:  #282A36;
+    --bg-area-2: #313446;
 
     /* === Color === */
     --colorTwo: #F7F7F8;
@@ -40,6 +19,11 @@
     /* === box shadow === */
     --boxShadow-card: 5px 5px 0 rgb(255 255 255 / 20%);
     --boxShadowCard-hover: 10px 10px 0px rgba(255, 255, 255, 0.2);
+
+    /* === Other Settings === */
+    --container: 75rem;
+    --height: calc(100vh - 5rem);
+    --top: 5.5rem; 
 
 }
 *{
@@ -52,12 +36,10 @@ html, body{
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
-body{
-    background-color: var(--body-color);
-}
 #container{
     display: flex;
     flex-direction: column;
+    background: #784CFB;
 }
 #container_wrapper, 
 .about, 
@@ -77,6 +59,7 @@ body{
     margin-bottom: 2rem;
     padding-top: 5rem; 
     background: var(--bg-title-1);
+    background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -o-background-clip: text;
@@ -113,8 +96,8 @@ body{
     height: 45px;
     border-radius: 50%;
     color: #000;
-    z-index: 99;
-    background-color: var(--colorOne);
+    z-index: 100000;
+    background-color: #784CFB;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,31 +121,6 @@ body{
 }
 ::-webkit-scrollbar-thumb:hover{
     background: #454f6b;
-}
-/* ================= button Theme Light/Dark =================*/
-.theme-btn{
-    z-index: 99;
-    position: fixed;
-    right: 0;
-    top: 100px;
-    background: var(--bg-theme);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    -moz-backdrop-filter: blur(20px);
-    
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2em;
-    border-radius: 5px 0 0 5px;
-    box-shadow: 0px 0px 20px rgb( 0 0 0 / 10%);
-    cursor: pointer;
-}
-.theme-btn .fa-sun{
-    display: none;
-    color: var(--colorTwo);
 }
 /* ========================== HEADER =======================*/
 .header{
@@ -228,12 +186,12 @@ body{
     color: var(--colorTwo);
 }
 .navbar_list > a:hover{
-    color: #4997FF;
-    border-bottom: 2px solid #4997FF;
+    color: #784CFB;
+    border-bottom: 2px solid #784CFB;
 }
 .navbar_list .active{
-    border-bottom: 2px solid var(--colorOne);
-    color: #4997FF;
+    border-bottom: 2px solid #784CFB;
+    color: #784CFB;
 }
 /* ================= Menu Hambuguer =================*/
 .mobile-menu{
@@ -251,12 +209,96 @@ body{
 
 /* ========================== WRAPPER =======================*/
 #container_wrapper{
-    height: 90vh;
+    height: 100vh;
+    background-color: var(--bg-area-1);
 }
 .wrapper{
     position: relative;
     width: var(--container);
     display: flex;
+}
+/* ===== IMGS =====*/
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.overlay .shape {
+    width: initial;
+    opacity: 0.13;
+    position: absolute;
+}
+
+.points {
+    opacity: 0.3;
+    position: absolute;
+}
+#container_wrapper .points1 {
+    width: 22%;
+    top: 80%;
+    left: 0%;
+}
+
+#container_wrapper .points2 {
+    width: 35%;
+    top: 65%;
+    left: 67%;
+}
+
+#container_wrapper .square {
+width: 50px;
+right: 68%;
+top: 71%;
+}
+
+#container_wrapper .triangle {
+    width: 60px;
+    right: 7%;
+    bottom: 75%;
+}
+
+#container_wrapper .xshape {
+    width: 50px;
+    left: 4%;
+    top: 10%;
+}
+#container_wrapper .xshape2 {
+    width: 50px;
+    right: 4%;
+    bottom: 50%;
+}
+#container_wrapper .half-circle1 {
+    width: 40px;
+    left: 50%;
+    bottom: 82%;
+}
+
+#container_wrapper .half-circle2 {
+    width: 40px;
+    left: 5%;
+    top: 55%;
+}
+
+#container_wrapper .wave1 {
+    width: 55px;
+    left: 0;
+    top: 0;
+}
+
+#container_wrapper .wave2 {
+    width: 150px;
+    bottom: 8%;
+    right: 55%;
+}
+
+#container_wrapper .circle {
+    width: 55px;
+    top: 20%;
+    left: 20%;
 }
 .wrapper_info{
     display: flex;
@@ -265,7 +307,7 @@ body{
 }
 /* ======= Text ======*/
 .wrapper_text{
-    flex: 2;
+    flex: 1.5;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -280,7 +322,7 @@ body{
 }
 .wrapper_subtitle{
     font-weight: 600;
-    color: #4997FF;
+    color: #784CFB;
     font-size: 2.5rem;
 }
 .wrapper_subtitle::after{
@@ -294,7 +336,7 @@ body{
     bottom: 100px;
 }
 .scroll-down i{
-    color: var(--colorOne);
+    color: #784CFB;
     font-size: 2.5em;
     animation: arrow-down ease 2s infinite;
 }
@@ -317,7 +359,7 @@ body{
     color: var(--colorTwo);
 }
 .wrapper_social > a > i:hover{
-    color: #4997FF;
+    color: #784CFB;
 }
 /* ======= Image ======*/
 .wrapper_img{
@@ -331,8 +373,12 @@ body{
   
 }
 /* ======================= ABOUT =====================*/
+.about{
+    background-color: var(--bg-area-2);
+    padding-bottom: 8rem;
+}
 .about_content{
-    width: var(--container);
+    width: 90rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -344,8 +390,19 @@ body{
 }
 /* ======= Image ======*/
 .about_img{
+    display: flex;
     position: relative;
-    top: 100px;
+    top: 60px;
+    padding-right: 3rem;
+}
+.about_img_content{
+    flex: 1;
+    border-right: 25px solid #784CFB;
+    border-bottom: 25px solid #784CFB;
+    border-radius: 15%;
+}
+.about_img_content img:hover{
+    transform: scale(1.05);
 }
 /* ======= About ======*/
 .info_about{
@@ -356,7 +413,7 @@ body{
     word-wrap: break-word;
     line-height: 2rem;
     text-indent: 1.25rem;
-    color: var(--colorTwo);
+    color: #fff;
 }
 .info_about:not(:last-child){
     margin-bottom: 1rem;
@@ -369,7 +426,7 @@ body{
     top: 1.25rem;
     padding: .4rem;
     border-radius: 5px;
-    background-color: var(--colorOne);
+    background-color: #784CFB;
     border: 1px solid #32558354;
     cursor: pointer;
 }
@@ -382,7 +439,9 @@ body{
 }
 /* ======================= HARD SKILL =====================*/
 .hardSkills{
-    padding: 3rem 0;
+    padding: 3rem 0 7rem 0;
+    background-color: var(--bg-area-1);
+    position: relative;
 }
 .hardSkill{
     width: var(--container);
@@ -390,6 +449,25 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.hardSkills .overlay_skill{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.overlay_skill .shape{
+    width: initial;
+    opacity: 0.13;
+}
+.hardSkills .points3, .hardSkills .points4{
+    position: relative;
+    width: 250px;
+    top: 65%;
+    left: 15%;
+    z-index: 0;
+}
+.hardSkills .points4{
+    left: 60%;
 }
 .hardSkill .skill_content{
     display: flex;
@@ -401,22 +479,26 @@ body{
 .hardSkill .skill_content .skill_card{
     width: 220px;
     height: 240px;
+    background-color: var(--bg-area-2);
     margin-bottom: 1rem;
     padding: .5rem;
-    border: var(--boder-card);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     color: var(--colorTwo);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    transition: all .5s ease;
+    transition: all .1s ease;
 }
 .hardSkill .skill_content .skill_card:hover{
-    border: 1px solid #4997FF;
-    transition: .5s ease;
+    border-bottom: 5px solid #784CFB;
+    transform: scale(1.1);
 }
 .skill_content .skill_card img{
+    background-color: var(--bg-area-2);
+    position: relative;
     width: 3rem;
 }
 .skill_content i{
@@ -436,50 +518,63 @@ body{
 }
 /* ======================= PORTFOLIO =====================*/
 .portfolios{
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 5rem 0;
+    background-color: var(--bg-area-2);
+    position: relative;
+    padding-bottom: 5rem;
+}
+.portfolios_img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
 }
 .portfolio{
     width: var(--container);
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-items: center;
 }
 .portfolio_project{
     flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .portfolio_buttons{
+    z-index: 99;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 60%;
+    padding-bottom: 2rem;
     padding: 1.25rem;
 }
 .portfolio_buttons button{
+    width: 150px;
+    height: 35px;
     position: relative;
     top: .1rem;
-    bottom: 1.25rem;
+    bottom: 1rem;
     border:none;
     cursor: pointer;
     font-size: 1.2rem;
     background: none;
-    color: var(--colorTwo);
-}
-.portfolio_buttons button:not(:last-child){
-    margin-right: 1.5rem;
-}
-.portfolio_buttons button:nth-child(1){
-    margin-left: 0rem;
+    color: #fff;
 }
 .portfolio_buttons .active_btn{
     width: 150px;
     height: 35px;
-    background-color: var(--colorOne);
+    background-color: #fff;
     border-radius: 15px;
-    color: #fff;
-   
+    color: #784CFB;
 }
 .portfolio_area{
     display: flex;
@@ -575,6 +670,7 @@ body{
 .contacts{
     display: flex;
     justify-content: center;
+    background-color: var(--bg-area-1);
 }
 .contact{
     width: var(--container);
@@ -653,7 +749,7 @@ body{
     border-radius: 20px;
     border: 1px solid rgba(0, 0, 0, 0.171);
     cursor: pointer;
-    background-color: var(--colorOne);
+    background-color: #784CFB;
     color: #fff;
 }
 .form_btn:hover{
@@ -667,6 +763,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 3rem;
+    background-color: var(--bg-area-2);
 }
 .footer{
     display: flex;
@@ -706,7 +804,7 @@ body{
     margin-left: 1.5rem;
 }
 .footer_social > a:hover{
-    color: #4997FF;
+    color: #784CFB;
 }
 .footer small{
     padding-top: .4rem;
@@ -796,7 +894,7 @@ body{
         right: 0;
         width: 50vw;
         height: 100vh;
-        background-color:var(--colorOne);
+        background-color: #784CFB;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -851,11 +949,29 @@ body{
     .wrapper_info .wrapper_text .wrapper_title {
         font-size: 2.5rem;
     }
+    .wrapper_text{
+        flex: 1.5;
+    }
+    #container_wrapper .circle {
+        top: 30%;
+        left: 25%;
+    }
+    #container_wrapper .wave2 {
+        right: 46%;
+    }
+    #container_wrapper .points1 {
+        width: 28%;
+        top: 83%;
+    }
+    #container_wrapper .points2 {
+        top: 72%;
+    }
     .about_title_01{
         font-size: 3.5em;
     }
     .portfolio_buttons {
         justify-content: center;
+        width: 70%;
     }
     .info_about{
         font-size: 1rem;
@@ -864,12 +980,23 @@ body{
     }
     .about_img {
         top: 41px;
+        padding: 0 0 0 2rem;
+
     }
     .about_content .about_btn{
         top: -0.75rem;
     }
     .hardSkill .skill_title_01{
         padding-top: 1rem;
+    }
+    .hardSkills .points3, .hardSkills .points4 {
+        position: relative;
+        width: 190px;
+        top: 80%;
+        left: 6%;
+    }
+    .hardSkills .points4 {
+        left: 46%;
     }
     .contact_form{
         width: 100%;
@@ -884,7 +1011,10 @@ body{
     .header_brandName > a{
         justify-content: flex-end;
     }
-    .wrapper_info .wrapper_text{
+    .wrapper_info .wrapper_text {
+        flex: 1.5;
+    }
+    .wrapper_info{
         flex: 2;
     }
     #container_wrapper .wrapper_title {
@@ -904,8 +1034,22 @@ body{
         display: flex;
         justify-content: center;
     }
+    .about_img_content{
+        position: static;
+    }
+    .about_img_content img{
+        width: 100%;
+    }
+    .hardSkills .points3, .hardSkills .points4 {
+        top: 86%;
+        left: -7%;
+    }
+    .hardSkills .points4 {
+        left: 40%;
+    }
     .portfolio_buttons {
         justify-content: center;
+        width: 90%;
     }
     .contact_title_01{
         font-size: 3.5em;
@@ -916,7 +1060,7 @@ body{
 }
 @media (max-width: 425px) {
     #container_wrapper .wrapper_info .wrapper_text {
-        flex: 3;
+        flex: 1.5;
     }
     #container_wrapper .wrapper_info .wrapper_subtitle {
         font-size: 2rem;
@@ -937,8 +1081,40 @@ body{
     }
 }
 @media (max-width: 375px) {
+    #container_wrapper .wrapper_info .wrapper_text {
+        flex: 1.8;
+    }
+    #container_wrapper .circle {
+        width: 45px;
+        top: 32%;
+        left: 36%;
+    }
+    #container_wrapper .half-circle1 {
+        width: 35px;
+        left: 43%;
+        bottom: 85%;
+    }
+    #container_wrapper .xshape {
+        width: 40px;
+        top: 17%;
+    }
+    #container_wrapper .wave2 {
+        width: 90px;
+    }
+    #container_wrapper .points1 {
+        width: 35%;
+        top: 90%;
+    }
+    #container_wrapper .points2 {
+        width: 40%;
+        top: 84%;
+        left: 61%;
+    }
     .info_about {
         font-size: 1rem;
+    }
+    .about_img {
+        padding: 0;
     }
     .hardSkill .skill_content {
         padding: 0.2rem;
@@ -956,6 +1132,17 @@ body{
 @media (max-width: 320px) {
     .header_brandName > a > img {
         margin-left: 20px;
+    }
+    .about_img {
+        padding: 20px;
+    }
+    .about_img_content {
+        display: flex;
+        justify-content: center;
+        padding: .5rem;
+    }
+    .about_img_content img {
+        width: 80%;
     }
     .about_content .about_title_01 {
         font-size: 3em;
