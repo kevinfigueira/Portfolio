@@ -637,7 +637,7 @@ top: 71%;
 }
 .card_content .card_title, .card_paragraph{
     text-align: center;
-    padding: .5rem;
+    padding: .6rem;
     color: #212121;
     transition: all .3s;
 }
@@ -665,6 +665,9 @@ top: 71%;
 }
 .hide{
     display: none;
+}
+.card_title {
+    font-size: 1.3rem;
 }
 /* ========================= CONTACT =======================*/
 .contacts{
