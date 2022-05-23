@@ -4,6 +4,7 @@ const w_title = document.querySelector('.wrapper_title');
 const w_subtitle = document.querySelector('.wrapper_subtitle');
 const card = document.querySelectorAll('.card_container');
 const cardContent = document.querySelectorAll('.card_content');
+const form = document.querySelector('form');
 
 
 // ================= Functions =================
@@ -228,3 +229,10 @@ function filterOption(value){
        }
    })
 }
+
+// ==== Prevent Form ====
+/* 
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+}) */

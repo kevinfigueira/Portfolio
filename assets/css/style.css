@@ -809,10 +809,12 @@ top: 71%;
 .footer_social > a:hover{
     color: #784CFB;
 }
-.footer small{
+.footer .email{
     padding-top: .4rem;
     margin-left: 30px;
     font-size: 1rem;
+    color: #FFF;
+    text-decoration: none;
 }
 .copy{
     display: flex;
